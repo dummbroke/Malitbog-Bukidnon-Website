@@ -159,7 +159,6 @@ body, h1, h2, h3, ul, li, a, button {
     overflow: hidden;
     position: relative; 
     background-color: #f4f4f4;
-    margin-bottom: 30px;
 }
 
 .slider-container {
@@ -261,6 +260,8 @@ body, h1, h2, h3, ul, li, a, button {
     padding: 10px 20px;
     background-color: #A6FF67;
     color: black;
+    font-family: Roboto;
+    font-size: large;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -270,3 +271,80 @@ body, h1, h2, h3, ul, li, a, button {
 .explore-btn:hover {
     background-color: #0056b3;
 }
+
+
+
+
+
+
+/* News Section */
+.news-section {
+    background-color: #E6FFD4; /* Light background for contrast */
+    padding: 40px 20px; /* Space around the section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center-align text content */
+    min-height: 100vh; /* Make section take full height of the viewport */
+}
+
+.news-title h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* Darker text for readability */
+    margin-bottom: 10px;
+}
+
+.news-latest-updates-title h2 {
+    font-size: 24px;
+    color: #000000; /* Slightly lighter text */
+    margin-top: 20px;
+}
+
+.news-upcoming-events-title h2 {
+    font-size: 24px;
+    color: #ff0000; /* Slightly lighter text */
+    margin-top: 40px;
+}
+
+/* News Container */
+.news-container {
+    display: flex; /* Align items horizontally */
+    flex-wrap: wrap; /* Wrap items if they don't fit in one row */
+    gap: 20px; /* Space between news cards */
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 20px;
+}
+
+/* News Card */
+.news1 {
+    background: #A6FF67; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    max-width: 300px; 
+    text-align: center; 
+    flex: 1 1 calc(33.333% - 40px); 
+}
+
+.news1:hover {
+    transform: scale(1.05); 
+    transition: transform 0.8s ease; 
+}
+
+.sub-sub-news-title {
+    font-size: 1rem;
+    font-family: Roboto;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.event-image img {
+    width: 100%; /* Make image responsive to card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Smooth corners on images */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
