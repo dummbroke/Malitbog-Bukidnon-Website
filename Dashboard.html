@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malitbog Municipality</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    
+    <!-- Header Section -->
+    <div class="wrapper">
+            <header>
+                <div class="header-container">
+                    <!-- Logo Left -->
+                    <div class="logo">
+                        <img src="Image/Municipal_Building.png" alt="Malitog Logo">
+                    </div>
+
+                    <!-- Center Text -->
+                    <div class="header-title">
+                        <h1>REPUBLIC OF THE PHILIPPINES PROVINCE OF BUKIDNON</h1>
+                        <h1>LOCAL GOVERNMENT OF MALITBOG BUKIDNON</h1>
+                    </div>
+
+                    <!-- Logo Right -->
+                    <div class="logo">
+                        <img src="Image/Gym_Building.png" alt="Malitog Logo">
+                    </div>
+                </div>
+            </header>
+        
+
+        <!-- Navigation Section -->
+        <div class="nav-section">
+            <div class="nav-title">
+                <h1>Malitbog</h1>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="slider-section">
+            <div class="slider-container">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <img src="Image/carousel1.jpg" alt="Bukidnon View 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <img src="Image/carousel2.jpg" alt="Bukidnon View 2">
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <img src="Image/carousel3.jpg" alt="Bukidnon View 3">
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <img src="Image/carousel4.jpg" alt="Bukidnon View 4">
+                </div>
+            </div>
+
+            <!-- Foreground Content -->
+            <div class="content-wrapper">
+                <section class="welcome">
+                    <div class="welcome-logos">
+                        <img src="Image/Logo1.png" alt="Malitbog Bukidnon Logo">
+                        <img src="Image/Logo2.png" alt="Bagong Pilipinas Logo">
+                    </div>
+                    <div class="welcome-content">
+                        <h2>Welcome to the Official Website of the Local Government of Malitbog, Bukidnon!</h2>
+                        <h3>We are thrilled to have you visit our website. Here, you'll discover the essence of Malitbog, a municipality rich in history, culture, and natural beauty. Whether you're exploring our community, planning a visit, or seeking business opportunities, we're here to assist you every step of the way.</h3>
+                        <button class="explore-btn">Explore Malitbog Today</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+
+            // Change slides every 5 seconds
+            setInterval(nextSlide, 5000);
+
+            // Show the first slide initially
+            showSlide(currentIndex);
+        });
+        </script>
+        
+
+       
+        
+        
+
+    </div>
+</body>
+</html>
