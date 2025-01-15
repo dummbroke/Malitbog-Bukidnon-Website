@@ -4,13 +4,28 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto Med';
     src: url('fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Reg';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'NerkOne';
     src: url('fonts/Goodness Cakes.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Opensans Light';
+    src: url('fonts/OpenSans-Light.ttf') format('truetype');
 }
 
 /* General Reset */
@@ -22,48 +37,90 @@ body, h1, h2, h3, ul, li, a, button {
     box-sizing: border-box;
 }
 
+
+
 /* Wrapper */
 .wrapper {
     max-width: 1500px;
     margin: 0 auto;
-    background-color: #a6ff67;
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+.wrapper-header {
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+/* Header Section */
+header {
+    position: relative;
+    height: 200px; /* Adjust height as needed */
+    background-color: #f5f5f5; /* Fallback color in case image doesn't load */
+}
+
+/* Header Background */
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image/header_bg.png'); /* Use the background image */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    z-index: 1; /* Layer it behind the content */
 }
 
 /* Header Container */
 .header-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    height: 150px;
-    max-width: 1500px;
-    margin: 0 auto;
+    height: 100%;
+    z-index: 2; /* Place it above the background */
+    color: #fff; /* Ensure text is readable over the image */
 }
 
 /* Logo */
-.logo img {
-    width: 350px;
+.logo1 img {
+    width: 650px;
     height: auto;
+    margin-left: -170px;
+    margin-top: -20px;
+}
+
+.logo2 img {
+    width: 500px;
+    height: auto;
+    margin-right: -70px;
 }
 
 /* Header Title */
 .header-title {
     text-align: center;
+    margin-left: -30px;
+    margin-top: -30px;
 }
+
 
 .header-title h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 34px;
     font-weight: bold;
-    color: #333;
+    color: #fff; /* Ensure text stands out on the background */
     line-height: 1.5;
+    margin: 0;
+    -webkit-text-stroke: 2px rgb(0, 0, 0); /* Adjust the width and color as needed */
 }
 
-/* Desktop Navigation */
+/* Navigation */
 .desktop-nav {
     display: flex;
     justify-content: center;
-    background-color: #33333300;
+    background-color: #33333300; /* Transparent background */
     padding: 10px 0;
 }
 
@@ -85,7 +142,7 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .desktop-nav a:hover {
-    color: #000000;
+    color: #000;
 }
 
 
@@ -98,23 +155,34 @@ body, h1, h2, h3, ul, li, a, button {
     background-color: #a6ff67;
     padding: 10px 20px;
     display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    gap: 600px;
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
     justify-content: space-between; /* Distribute space between title and menu */
     align-items: center; /* Center the items vertically */
+    width: 100%;
+    max-width: 1500px; /* Limit the width */
+    margin: 0 auto; /* Center the container on the page */
 }
 
 /* Navigation Title */
 .nav-title h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 30px;
+    font-family: Playfair;
+    font-size: 40px;
     font-weight: bold;
     margin: 0;
     color: #333;
 }
 
-/* Navigation */
+/* Desktop Navigation */
 .desktop-nav {
     display: flex;
-    justify-content: center; /* Center the navigation items horizontally */
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -135,8 +203,8 @@ body, h1, h2, h3, ul, li, a, button {
 /* Navigation Links */
 .desktop-nav a {
     color: #fff;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
+    font-family: Roboto;
+    font-size: 20px;
     text-transform: uppercase;
     padding: 10px 20px;
     display: block;
@@ -147,6 +215,24 @@ body, h1, h2, h3, ul, li, a, button {
 .desktop-nav a:hover {
     color: #000;
 }
+
+/* Sticky Navigation */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    transition: all 0.3s ease;
+    max-width: 1500px;
+}
+
+/* Additional margin for content when the navigation is sticky */
+.content-wrapper {
+    margin-top: 80px; /* Adjust this to match the height of your navigation bar */
+}
+
+
 
 
 
@@ -223,7 +309,7 @@ body, h1, h2, h3, ul, li, a, button {
 /* Welcome Section */
 .welcome {
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 130px;
 }
 
 .welcome-logos {
@@ -243,24 +329,37 @@ body, h1, h2, h3, ul, li, a, button {
     font-size: 4.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-left:  220px;
+    margin-left: 220px;
     margin-right: 220px;
     color: white;
+    transition: color 0.3s;
 }
+
+.welcome-content h2:hover {
+    color: #000000; /* Tomato color */
+}
+
 
 .welcome-content h3 {
     font-size: 2rem;
+    font-family: 'Opensans Light';
     margin-bottom: 30px;
     margin-left:  220px;
     margin-right: 220px;
     color: white;
+    transition: color 0.3s;
 }
+
+.welcome-content h3:hover {
+    color: #000000; /* Tomato color */
+}
+
 
 .explore-btn {
     padding: 10px 20px;
     background-color: #A6FF67;
     color: black;
-    font-family: Roboto;
+    font-family: Roboto Med;
     font-size: large;
     border: none;
     border-radius: 20px;
@@ -269,7 +368,7 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .explore-btn:hover {
-    background-color: #0056b3;
+    background-color: #65ff36;
 }
 
 
@@ -290,21 +389,24 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .news-title h1 {
-    font-size: 32px;
+    font-size: 45px;
+    font-family: Playfair;
     font-weight: bold;
     color: #333; /* Darker text for readability */
     margin-bottom: 10px;
 }
 
 .news-latest-updates-title h2 {
-    font-size: 24px;
+    font-size: 30px;
+    font-family: Playfair;
     color: #000000; /* Slightly lighter text */
     margin-top: 20px;
 }
 
 .news-upcoming-events-title h2 {
-    font-size: 24px;
-    color: #ff0000; /* Slightly lighter text */
+    font-size: 30px;
+    font-family: Playfair;
+    color: #000000; /* Slightly lighter text */
     margin-top: 40px;
 }
 
@@ -347,4 +449,88 @@ body, h1, h2, h3, ul, li, a, button {
     border-radius: 4px; /* Smooth corners on images */
     transition: transform 0.3s ease; /* Add hover effect */
 }
+
+
+
+
+
+
+
+
+
+/* About Section */
+.about-section {
+    
+    text-align: center; /* Center-align text by default */
+}
+
+/* About Container */
+.about-container {
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* About Title */
+.about-title h1 {
+    font-family: Playfair;
+    font-size: 45px; 
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+/* News Subtitle */
+.news-sub-title h2 {
+    font-family: Playfair;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0056b3; /* Blue shade for distinction */
+    margin: 30px 0 20px;
+}
+
+/* Short Story Content */
+.short-story-content h1 {
+    font-family: Playfair;
+    font-size: 30px;
+    font-weight: bold;
+    color: #444; /* Slightly lighter than black */
+    margin-bottom: 10px;
+}
+
+.short-story-content p {
+    font-family: Opensans Light;
+    font-size: 1rem;
+    line-height: 1.8; /* Improve readability with better line height */
+    color: #666; /* Neutral gray for text */
+    text-align: justify; /* Justify text for a clean block look */
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+}
+
+/* Continue Reading Button */
+.continue-reading-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0056b3; /* Blue button */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.continue-reading-btn:hover {
+    background-color: #003c82; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
 
