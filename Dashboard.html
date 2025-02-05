@@ -298,93 +298,56 @@
                 <div class="culture-type-title">
                     <h1>Culture</h1>
                 </div>
-                <!-- First Feature -->
-                <div class="culture-content">
-                    <div class="culture-bg">
-                        <img src="Image/street-dancing-img.jpg" alt="Street dancing background">
-                    </div>
-                    <div class="culture-header">
-                        <h2 class="culture-title">Street Dancing</h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="culture-body">
-                        <p class="culture-description">
-                            Witness the energetic performances as participants, dressed in traditional attire, dance through the streets, celebrating our heritage.
-                        </p>
-                    </div>
-                </div>
+                <div class="culture-wrapper">
+                    <div class="culture-container">
+                        <input type="radio" name="slide" id="c1" checked>
+                        <label for="c1" class="card">
+                            <div class="row">
+                                <div class="icon">1</div>
+                                <div class="description">
+                                    <h4>Street Dancing</h4>
+                                    <p>Witness energetic performances with traditional attire celebrating heritage.</p>
+                                </div>
+                            </div>
+                        </label>
             
-                <!-- Second Feature -->
-                <div class="culture-content">
-                    <div class="culture-bg">
-                        <img src="Image/float-img.jpg" alt="Float competition background">
-                    </div>
-                    <div class="culture-header">
-                        <h2 class="culture-title">Float Competition</h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="culture-body">
-                        <p class="culture-description">
-                            Marvel at the creatively decorated floats that parade through the town, each telling a story of Malitbog’s culture and history.
-                        </p>
-                    </div>
-                </div>
+                        <input type="radio" name="slide" id="c2">
+                        <label for="c2" class="card">
+                            <div class="row">
+                                <div class="icon">2</div>
+                                <div class="description">
+                                    <h4>Float Competition</h4>
+                                    <p>Marvel at creatively decorated floats showcasing Malitbog’s culture.</p>
+                                </div>
+                            </div>
+                        </label>
             
-                <!-- Third Feature -->
-                <div class="culture-content">
-                    <div class="culture-bg">
-                        <img src="Image/1km-ginanggang.jpg" alt="Ginanggang cookout background">
-                    </div>
-                    <div class="culture-header">
-                        <h2 class="culture-title">1KM Ginanggang Cookout</h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="culture-body">
-                        <p class="culture-description">
-                            Experience the unique 1km Ginanggang Cookout, where locals and visitors alike grill bananas over an open flame, creating a delightful treat.
-                        </p>
-                    </div>
-                </div>
+                        <input type="radio" name="slide" id="c3">
+                        <label for="c3" class="card">
+                            <div class="row">
+                                <div class="icon">3</div>
+                                <div class="description">
+                                    <h4>1KM Ginanggang Cookout</h4>
+                                    <p>Enjoy the unique cookout grilling bananas over open flames.</p>
+                                </div>
+                            </div>
+                        </label>
             
-                <!-- Fourth Feature -->
-                <div class="culture-content">
-                    <div class="culture-bg">
-                        <img src="Image/boxing-kawayan-img.jpg" alt="Boxing Kawayan background">
-                    </div>
-                    <div class="culture-header">
-                        <h2 class="culture-title">Boxing Kawayan</h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="culture-body">
-                        <p class="culture-description">
-                            Witness the thrilling Boxing Kawayan event, where participants use bamboo sticks in a traditional martial arts display, showcasing skill, agility, and cultural heritage.
-                        </p>
+                        <input type="radio" name="slide" id="c4">
+                        <label for="c4" class="card">
+                            <div class="row">
+                                <div class="icon">4</div>
+                                <div class="description">
+                                    <h4>Boxing Sa Kawayan</h4>
+                                    <p>Experience traditional martial arts with bamboo sticks.</p>
+                                </div>
+                            </div>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        <script>
-            document.querySelectorAll('.culture-header').forEach(header => {
-                header.addEventListener('click', () => {
-                    const content = header.parentElement;
-                    const body = content.querySelector('.culture-body');
-                    const originalBg = header.style.backgroundImage;
         
-                    content.classList.toggle('expanded');
-        
-                    if (content.classList.contains('expanded')) {
-                        header.dataset.originalBg = originalBg;
-                        header.style.backgroundImage = 'none';
-                        body.style.backgroundImage = originalBg;
-                    } else {
-                        header.style.backgroundImage = header.dataset.originalBg;
-                        body.style.backgroundImage = 'none';
-                    }
-                });
-            });
-        </script>
 
         <div class="geography-section">
             <!-- First Section -->

@@ -811,7 +811,7 @@ header {
 
 
 .culture-section .culture-type-title {
-    margin-bottom: 10px;
+margin-top: 60px;
 }
 
 .culture-type-title h1{
@@ -819,7 +819,6 @@ header {
     font-size: 45px; 
     font-weight: bold;
     color: #000; 
-    margin-bottom: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -827,109 +826,125 @@ header {
     transform: translateY(-5px);
 }
 
-.culture-section {
-    padding: 40px;
-    background-color: #E6FFD4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 50px;
-}
-
-/* Individual Content Block */
-.culture-content {
+.culture-wrapper {
     width: 100%;
-    max-width: 1000px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 70px; /* Minimum collapsed height */
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Background Image Container */
-.culture-bg {
+.culture-container {
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 150px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0 30px 50px #4f9a45;
+}
+
+.card > .row {
+    color: white;
+    font-family: Roboto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #42d742;;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #A6FF67;
+    padding-top: 5px;
+    font-family: Roboto Med;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    font-family: Roboto;
+    color: #A6FF67;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] { background-image: url('Image/street-dancing-img.jpg'); }
+.card[for="c2"] { background-image: url('Image/float-img.jpg'); }
+.card[for="c3"] { background-image: url('Image/1km-ginanggang.jpg'); }
+.card[for="c4"] { background-image: url('Image/boxing-kawayan-img.jpg'); }
+
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Add a dark overlay */
+.card::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.4);  /* Adjust the opacity here (0.4 = 40% darkness) */
     z-index: 1;
 }
 
-.culture-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-/* Header Styling */
-.culture-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+/* Ensuring text appears above the overlay */
+.card .row,
+.card .description,
+.card .icon {
     position: relative;
     z-index: 2;
-    background: rgba(246, 255, 230, 0.9);
-    transition: all 0.3s ease;
+    color: white;  /* Make sure the text color contrasts well */
 }
 
-/* Body Styling */
-.culture-body {
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    background: rgba(246, 255, 230, 0.9);
-    transition: max-height 0.3s ease-out;
-    padding: 0 20px;
-}
-
-/* Expanded State */
-.culture-content.expanded {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.culture-content.expanded .culture-body {
-    max-height: 1000px; /* Adjust based on content */
-    padding: 20px;
-}
-
-.culture-content.expanded .culture-bg img {
-    transform: scale(1.05);
-}
-
-/* Titles */
-.culture-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: Playfair;
-    color: #000000;
-    margin: 0;
-}
-
-/* Toggle Icon */
-.toggle-icon {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-.culture-content.expanded .toggle-icon {
-    transform: rotate(180deg);
-}
-
-/* Descriptions */
-.culture-description {
-    font-size: 1rem;
-    font-family: Opensans Light;
-    color: #000000;
-    margin-bottom: 0;
-    line-height: 1.6;
-}
 
 
 
