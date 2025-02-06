@@ -1,0 +1,417 @@
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Med';
+    src: url('fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Reg';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NerkOne';
+    src: url('fonts/Goodness Cakes.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Opensans Light';
+    src: url('fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+/* General Reset */
+body, h1, h2, h3, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Wrapper */
+.wrapper {
+    max-width: 1500px;
+    background-color: #E6FFD4;
+    margin: 0 auto;
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+
+
+
+
+
+
+/* Navigation */
+.desktop-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #33333300; /* Transparent background */
+    padding: 10px 0;
+}
+
+.desktop-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.desktop-nav li {
+    margin: 0;
+}
+
+.desktop-nav a {
+    color: #fff;
+    font-family: Roboto Reg;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.4s ease, transform 0.4s ease, font-family 0.4s ease; /* Include font-family in the transition */
+}
+
+.desktop-nav a:hover {
+    color: #000;
+    transform: scale(1.2); /* Scale up the font size slightly */
+    font-family: Roboto Med; /* Change font weight smoothly */
+}
+
+/* Navigation Section */
+.nav-section {
+    background-color: #a6ff67;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    gap: 600px;
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between title and menu */
+    align-items: center; /* Center the items vertically */
+    width: 100%;
+    max-width: 1500px; /* Limit the width */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+/* Navigation Title */
+.nav-title h1 {
+    font-family: Playfair;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Navigation List */
+.desktop-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Navigation List Items */
+.desktop-nav li {
+    margin: 0;
+}
+
+/* Enhanced Navigation Link Hover */
+.desktop-nav a {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for scaling effect */
+}
+
+.desktop-nav a:hover {
+    color: #000;
+    transform: scale(1.1); /* Slightly enlarges the link */
+}
+
+/* Underline Animation */
+.desktop-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%; /* Expands the underline */
+}
+
+
+/* Sticky Navigation */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    transition: all 0.3s ease;
+    max-width: 1500px;
+}
+
+/* Additional margin for content when the navigation is sticky */
+.content-wrapper {
+    margin-top: 80px; /* Adjust this to match the height of your navigation bar */
+}
+
+
+
+
+
+
+
+
+
+/* YAWA ABOUT */
+/* About Section */
+.history-section {
+    margin-top: 45px;
+    text-align: center; /* Center-align text by default */
+    background-color: #E6FFD4;
+    padding-bottom: 50px;
+}
+
+/* About Container */
+.history-container {
+    max-width: 1500px; 
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* About Title */
+
+.history-title h1 {
+    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
+    font-size: 3.5rem; 
+    font-weight: bold;
+    color: #000; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+.history-title h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #28a745; /* Change color to green on hover, matching your theme */
+}
+
+
+/* Right side: Text styling */
+.history-text {
+    flex: 1; /* Adjust to allow equal spacing if needed */
+    color: #000000;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Centers the text inside the box */
+    display: flex; /* Enables flexbox for centering */
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    margin-top: 25px;
+}
+
+.history-text h3{
+    font-family: PlayFair;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+/* Main paragraph styling */
+.short-story-content p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #000000; /* Dark gray for better readability */
+    text-align: justify;
+    padding: 0 10%;
+    margin-top: 10px;
+    margin-bottom: 15px; /* Adding spacing between paragraphs */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Highlighted text styling */
+.highlight {
+    color: #28a745; /* Dark green for emphasis */
+    font-weight: bold;
+    background-color: rgba(211, 47, 47, 0.1); /* Light red highlight */
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for highlighted text */
+.highlight:hover {
+    background-color: rgba(51, 150, 48, 0.2); /* Slightly darker green highlight */
+    color: #1d7431; /* Darker green text */
+    cursor: pointer; /* Makes it feel interactive */
+}
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #28a745; /* Darker green tone for contrast */
+    color: #ffffff; /* Accent color for text */
+    padding: 4rem 0 8rem;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    border-top: 4px solid #ffffff; /* Accent color */
+    max-height: 640px;
+}
+
+.footer-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    margin-top:  30px;
+}
+
+/* Emergency Hotlines */
+.hotlines-column {
+    padding: 2rem;
+    background: rgba(166, 255, 103, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    max-width: 900px;
+    margin: 0 auto;
+    margin-left: 130px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.hotlines-column h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.hotlines-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.hotlines-list li {
+    padding: 1.2rem;
+    background: rgba(166, 255, 103, 0.15);
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.hotlines-list li:hover {
+    transform: translateY(-2px);
+}
+
+.hotlines-list li strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+}
+
+.hotlines-list li img.footer-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: invert(85%) sepia(20%) saturate(200%) hue-rotate(90deg) brightness(110%) contrast(100%);
+}
+
+/* Quick Links */
+.quick-links-column {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.quick-links-column h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quick-links-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.quick-links-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    display: block;
+}
+
+.quick-links-list li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #A6FF67;
+    transform: scaleY(0);
+    transition: transform 0.2s ease;
+}
+
+.quick-links-list li a:hover {
+    background: rgba(166, 255, 103, 0.1);
+    padding-left: 1.5rem;
+}
+
+.quick-links-list li a:hover::before {
+    transform: scaleY(1);
+}

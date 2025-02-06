@@ -186,7 +186,7 @@ header {
     font-size: 40px;
     font-weight: bold;
     margin: 0;
-    color: #333;
+    color: #000000;
 }
 
 /* Desktop Navigation */
@@ -210,21 +210,40 @@ header {
     margin: 0;
 }
 
-/* Navigation Links */
+/* Enhanced Navigation Link Hover */
 .desktop-nav a {
     color: #fff;
-    font-family: Roboto;
+    font-family: Roboto Reg;
     font-size: 20px;
     text-transform: uppercase;
     padding: 10px 20px;
     display: block;
-    transition: color 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for scaling effect */
 }
 
-/* Navigation Link Hover */
 .desktop-nav a:hover {
     color: #000;
+    transform: scale(1.2); /* Scale up the font size slightly */
+    font-family: Roboto Med; /* Change font weight smoothly */
 }
+
+/* Underline Animation */
+.desktop-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%; /* Expands the underline */
+}
+
 
 /* Sticky Navigation */
 .sticky-nav {
@@ -395,15 +414,23 @@ header {
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
     text-align: center; /* Center-align text content */
-    min-height: 1200px; /* Make section take full height of the viewport */
+    min-height: 1100px; /* Make section take full height of the viewport */
 }
 
 .news-title h1 {
-    font-size: 45px;
-    font-family: Playfair;
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
     font-weight: bold;
     color: #000000; /* Darker text for readability */
     margin-bottom: 10px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
+}
+
+.news-title h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #28a745; /* Change color to green on hover, matching your theme */
 }
 
 .news-latest-updates-title h2,
@@ -500,7 +527,7 @@ header {
     max-width: 1500px; 
     margin: 0 auto; 
     padding: 10px;
-    margin-top: 20px;
+    padding-top: 70px;
 }
 /* History Content */
 .history-content{
@@ -523,6 +550,25 @@ header {
     transform: translateY(0);
     margin-top: 50px;
 }
+
+/* Highlighted text styling */
+.highlight {
+    color: #28a745; /* Dark green for emphasis */
+    font-weight: bold;
+    background-color: rgba(211, 47, 47, 0.1); /* Light red highlight */
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for highlighted text */
+.highlight:hover {
+    background-color: rgba(51, 150, 48, 0.2); /* Slightly darker green highlight */
+    color: #1d7431; /* Darker green text */
+    cursor: pointer; /* Makes it feel interactive */
+}
+
+
 
 /* Rectangle shape behind images */
 .about-images {
@@ -592,9 +638,22 @@ header {
     transition: transform 0.3s ease;
 }
 
-.about-title h1:hover {
-    transform: translateY(-5px);
+.about-title h1 {
+    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
+    font-size: 3.5rem; 
+    font-weight: bold;
+    color: #000; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
 }
+
+.about-title h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #28a745; /* Change color to green on hover, matching your theme */
+}
+
 
 
 /* About Images */
@@ -658,15 +717,25 @@ header {
     margin-bottom: 10px;
 }
 
+.short-story-content h3 {
+    font-family: Playfair;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Slightly lighter than black */
+    margin-bottom: 12px;
+}
+
 .short-story-content p {
-    font-family: Opensans Light;
-    font-size: 1rem;
+    font-family: "Open Sans";
+    font-size: 1.2rem;
+    font-weight: 300;
     line-height: 1.8; /* Improve readability with better line height */
-    color: #000; /* Neutral gray for text */
+    color: #000000; /* Neutral gray for text */
     text-align: justify; /* Justify text for a clean block look */
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Continue Reading Button */
@@ -814,16 +883,19 @@ header {
 margin-top: 60px;
 }
 
-.culture-type-title h1{
-    font-family: Playfair;
-    font-size: 45px; 
+.culture-type-title h1 {
+    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
+    font-size: 3.5rem; 
     font-weight: bold;
     color: #000; 
-    transition: transform 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
 }
 
-.about-title h1:hover {
-    transform: translateY(-5px);
+.culture-type-title h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #28a745; /* Change color to green on hover */
 }
 
 .culture-wrapper {
@@ -863,7 +935,7 @@ margin-top: 60px;
 }
 
 .card > .row > .icon {
-    background: #42d742;;
+    background: #50ba50;;
     color: white;
     font-size: 1rem;
     border-radius: 50%;
@@ -888,16 +960,19 @@ margin-top: 60px;
 }
 
 .description p {
-    color: #A6FF67;
+    color: #ffffff;
     padding-top: 5px;
     font-family: Roboto Med;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* This adds a subtle black shadow */
 }
 
 .description h4 {
     text-transform: uppercase;
     font-family: Roboto;
-    color: #A6FF67;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* This adds a subtle black shadow */
 }
+
 
 input {
     display: none;
@@ -917,33 +992,7 @@ input:checked + label .description {
 .card[for="c3"] { background-image: url('Image/1km-ginanggang.jpg'); }
 .card[for="c4"] { background-image: url('Image/boxing-kawayan-img.jpg'); }
 
-.card {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
 
-/* Add a dark overlay */
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);  /* Adjust the opacity here (0.4 = 40% darkness) */
-    z-index: 1;
-}
-
-/* Ensuring text appears above the overlay */
-.card .row,
-.card .description,
-.card .icon {
-    position: relative;
-    z-index: 2;
-    color: white;  /* Make sure the text color contrasts well */
-}
 
 
 
@@ -960,13 +1009,23 @@ input:checked + label .description {
     max-height: 1220px;
 }
 
+
 /* Section Title */
 .section-title {
-    font-size: 40px;
-    font-family: Playfair;
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
     color: #000000;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
 }
+
+.section-title:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #28a745; /* Change color to green on hover, matching your theme */
+}
+
 
 /* Container for Content */
 .geography-container {
@@ -980,13 +1039,17 @@ input:checked + label .description {
 /* Text Content Styling */
 .geography-text {
     flex: 1;
+    font-family: "Open Sans";
     margin-left: 80px;
     max-width: 50%;
     text-align: left;
     font-size: 1.2rem;
-    font-family: Opensans Light;
     line-height: 1.6;
     color: #000000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 300;
+    line-height: 1.8; 
+    text-align: justify;
 }
 
 /* Geography-Text2 Styling (Specific to the 2nd Section) */
@@ -996,9 +1059,30 @@ input:checked + label .description {
     max-width: 50%;
     text-align: left;
     font-size: 1.2rem;
-    font-family: Opensans Light;
+    font-family: "Open Sans";
     line-height: 1.6;
     color: #000000; /* Slightly darker text for contrast */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 300;
+    line-height: 1.8; 
+    text-align: justify;
+    margin-bottom: -30px;
+}
+
+.highlight {
+    color: #28a745; /* Dark green for emphasis */
+    font-weight: bold;
+    background-color: rgba(211, 47, 47, 0.1); /* Light red highlight */
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for highlighted text */
+.highlight:hover {
+    background-color: rgba(51, 150, 48, 0.2); /* Slightly darker green highlight */
+    color: #1d7431; /* Darker green text */
+    cursor: pointer; /* Makes it feel interactive */
 }
 
 /* Button Styling */
@@ -1050,34 +1134,52 @@ input:checked + label .description {
 
 .tour-container {
     overflow: hidden;
-    max-height: 900px;
+    max-height: 1000px;
 }
 
-.tour-title h1{
-    position: relative;
-    font-family: Playfair;
-    font-size: 40px;
-    margin-top: 100px;
+.tour-container .tour-title {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100%; /* Ensures the height of the container is taken into account */
 }
 
-.tour-section{
+.tour-container .tour-title h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
+    color: #000000;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
+    margin-top: 70px;
+}
+
+.tour-container .tour-title h1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #28a745; /* Change color to green on hover, matching your theme */
+}
+
+
+.tour-section {
     position: relative;
     margin: 20px auto;
-    margin-top: 450px;
-    left: 43.7%;
+    margin-top: 400px;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 1300px;
+    width: 1500px;
     height: 700px;
     background: #f6ffe6;
     box-shadow: 0 30px 50px #99ff9c;
 }
 
-.tour-section .tour-slide .tour-item{
+.tour-section .tour-slide .tour-item {
     width: 200px;
     height: 300px;
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
+    right: 100%; /* Move the item to the right side */
+    transform: translate(70%, -50%); /* Ensure the item is correctly positioned */
     border-radius: 20px;
     box-shadow: 0 30px 50px #30572b;
     background-position: 50% 50%;
@@ -1115,17 +1217,19 @@ input:checked + label .description {
 
 
 
-.tour-item .tour-content{
+.tour-item .tour-content {
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 120px;
     width: 300px;
     text-align: left;
-    color: #A6FF67;
+    color: #ffffff;
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* This adds a subtle black shadow */
 }
+
 
 
 .tour-slide .tour-item:nth-child(2) .tour-content{
@@ -1222,18 +1326,20 @@ input:checked + label .description {
 
 
 
-/* Modern Footer Styles */
+
+/* Footer Section */
 .footer-section {
-    background-color: #1a2e35; /* Sophisticated dark teal */
-    color: #e0f2fe;
-    padding: 4rem 0 8rem; /* Increased bottom padding for logos */
+    background-color: #28a745; /* Darker green tone for contrast */
+    color: #ffffff; /* Accent color for text */
+    padding: 4rem 0 8rem;
     position: relative;
     font-family: 'Roboto', sans-serif;
-    border-top: 4px solid #38bdf8; /* Modern accent border */
+    border-top: 4px solid #ffffff; /* Accent color */
+    max-height: 640px;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
@@ -1242,40 +1348,46 @@ input:checked + label .description {
 .footer-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 4rem;
+    gap: 2rem;
     margin-bottom: 4rem;
+    margin-top:  30px;
 }
 
-/* Modern Emergency Hotlines */
+/* Emergency Hotlines */
 .hotlines-column {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(166, 255, 103, 0.1);
     border-radius: 16px;
     backdrop-filter: blur(8px);
-    max-width: 400px;
+    max-width: 900px;
     margin: 0 auto;
+    margin-left: 130px;
+    height: 300px;
+    margin-top: 50px;
 }
 
 .hotlines-column h2 {
     font-size: 1.5rem;
-    color: #38bdf8;
+    color: #ffffff;
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .hotlines-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
 }
 
 .hotlines-list li {
     padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
+    background: rgba(166, 255, 103, 0.15);
+    border-radius: 10px;
     transition: transform 0.2s ease;
     font-size: 1rem;
+    width: 200px;
 }
 
 .hotlines-list li:hover {
@@ -1285,25 +1397,26 @@ input:checked + label .description {
 .hotlines-list li strong {
     display: block;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .hotlines-list li img.footer-icon {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    filter: invert(98%) sepia(1%) saturate(427%) hue-rotate(181deg) brightness(116%) contrast(100%);
+    filter: invert(85%) sepia(20%) saturate(200%) hue-rotate(90deg) brightness(110%) contrast(100%);
 }
 
-/* Modern Quick Links */
+/* Quick Links */
 .quick-links-column {
     max-width: 400px;
     margin: 0 auto;
+    margin-top: 35px;
 }
 
 .quick-links-column h2 {
     font-size: 1.5rem;
-    color: #38bdf8;
+    color: #ffffff;
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1315,7 +1428,7 @@ input:checked + label .description {
 }
 
 .quick-links-list li a {
-    color: #e0f2fe;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.8rem;
     border-radius: 8px;
@@ -1331,16 +1444,19 @@ input:checked + label .description {
     top: 0;
     width: 3px;
     height: 100%;
-    background: #38bdf8;
+    background: #A6FF67;
     transform: scaleY(0);
     transition: transform 0.2s ease;
 }
 
 .quick-links-list li a:hover {
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(166, 255, 103, 0.1);
     padding-left: 1.5rem;
 }
 
 .quick-links-list li a:hover::before {
     transform: scaleY(1);
 }
+
+
+

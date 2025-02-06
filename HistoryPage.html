@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="HistoryPage.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!--
+        **************************************************************
+        *                                                            *
+        *                        Navigation Section                  *
+        *                                                            *
+        **************************************************************
+        -->
+
+        <div id="home" class="nav-section">
+            <div class="nav-title">
+                <h1>Malitbog</h1>
+            </div>
+        
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script>
+                    document.querySelectorAll('.desktop-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor jump
+
+                const targetId = this.getAttribute('href').substring(1); // Get section ID
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, // Adjust for navbar height
+                        behavior: 'smooth' // Enables smooth scrolling
+                    });
+                }
+            });
+        });
+
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navSection = document.querySelector(".nav-section");
+                const placeholder = document.createElement("div");
+        
+                // Set placeholder height equal to nav height
+                placeholder.style.height = `${navSection.offsetHeight}px`;
+                placeholder.style.display = "none"; // Initially hidden
+        
+                // Insert placeholder before the nav
+                navSection.parentNode.insertBefore(placeholder, navSection);
+        
+                window.addEventListener("scroll", () => {
+                    if (window.pageYOffset > navSection.offsetTop) {
+                        navSection.classList.add("sticky-nav");
+                        placeholder.style.display = "block"; // Show placeholder to prevent shift
+                    } else {
+                        navSection.classList.remove("sticky-nav");
+                        placeholder.style.display = "none"; // Hide placeholder when not sticky
+                    }
+                });
+            });
+        </script>
+
+                        <!--
+        **************************************************************
+        *                                                            *
+        *                        History Section                       *
+        *                                                            *
+        **************************************************************
+        -->
+        <div id="about" class="history-section">
+            <div class="history-container">
+                <!-- About Section -->
+                <div class="history-title">
+                    <h1>History</h1>
+                </div>
+
+                    <!-- History Text -->
+                    <div class="history-text">
+                        <div class="short-story-content">
+                            <h3>Legend of Malitbog</h3>
+                            <p>As early as 1700, people in this town were already living in clusters, but this place had no name yet. This group of people was headed by a Datu whom they had chosen as the most qualified for the position. This Datu had right-hand men known by the names of <span class="highlight">Amay Mantumbaga</span>, <span class="highlight">Amay Kagang-kagang</span>, and <span class="highlight">Amay Guinaya</span>. Due to the superior abilities of this Datu and his three right-hand men, a Muslim Datu came to make friends with them. As a token of their friendship, the Muslim gave them a very big agong called <span class="highlight">"Agong Makatukag."</span> Once the sound of this agong was heard, the people would immediately assemble at the house of their Datu. This Muslim Datu was the very one who baptized their Datu with the name <span class="highlight">Datu Saguilongan</span>.
+                                
+                                <br><br>Years passed, and the people worked hard and lived in plenty. They had wide rice fields. People from the neighboring places along the beach came up during the harvest season to help with the rice harvest. They did not stay long, so the people immediately returned to their homes, happy as ever.
+                                
+                                <br><br>Datu Saguilongan had many children but only one daughter, whom he loved dearly. One day, he told his daughter, <span class="highlight">"My dear, if ever you will marry, please don’t marry a stranger. A stranger might be a spy of the Spaniards who will come and drive us out of our homes."</span>
+                                
+                                <br><br>One harvest season, many harvesters came. Among the group was a tall, handsome young man who fell in love with the Datu’s daughter. She was restricted from talking to the visitors, but when she fetched water, the young man would follow her to the spring, and there they had a chance to converse. After a few weeks, the Datu’s daughter fell in love with the stranger. This relationship between the two was not known by her father since he was often away. After the harvest season, the harvesters went home.
+                                
+                                <br><br>The suitor of the Datu’s daughter came every now and then for a visit, so the Datu eventually learned of the relationship between his daughter and the stranger. He became very angry and severely scolded his daughter. He drove the stranger away. As punishment, she was locked in one of the rooms of their house and restricted from going out. She was closely guarded.
+                                
+                                <br><br>During this time, his daughter grieved so much and refused to eat, eventually becoming sick. One day, her mother pitied her and opened the door when the stranger came for a visit. They planned to elope, but it was impossible. They did not speak loudly because the Datu came home and scolded his daughter once more, severely. She was locked again in her room. From this time on, his daughter became serious and finally became mentally upset. She could not sleep and refused to eat.
+                                
+                                <br><br>The Datu called for <span class="highlight">Amay Mantumbaga</span>, <span class="highlight">Amay Kagang-Kagang</span>, and <span class="highlight">Amay Guinaya</span>, begging them to help him cure his sick daughter. He promised a reward to anyone who could cure her. The Datu’s problem became a problem for all his people.
+                                
+                                <br><br>It so happened that one day, they failed to lock the door. His daughter escaped and was nowhere to be found. Everyone searched for her here and there, but she could not be found. At last, her suitor came and helped in the search. He thought of going to the spring where they used to meet. Right in the middle of the river was a big stone. There sat a woman looking at the spring. He called for her, and when she heard her lover’s call, she stood up and appeared to be well and in her normal mind. Hastily, the young man went to rescue her. He lifted and carried her down from the stone to the river, and they both went down, down into the river.
+                                
+                                <br><br>Many people ran to the bank to witness the event. They told the Datu everything. The Datu and his wife cried. The Datu repented for restricting his only daughter too much in the wrong way. He beat and beat his agong, and so his people came. He ordered them to look for the dead bodies of the two, but they were never found. He related the cause of the death of his only daughter, saying, <span class="highlight">"Nalibog, Nalibog,"</span> which in the dialect means "a person becomes insane." The Datu repented for all he had done, but it was useless after all. <span class="highlight">“Therefore, the Datu can never undo.”</span> Repentance always comes late. The Datu then told his people, <span class="highlight">“Let us call our town Malibog, so I will never forget my only daughter.”</span>
+                                
+                                <br><br>This name continued until Datu Saguilongan’s son, <span class="highlight">Roberto</span>, succeeded him. This man headed the town for many years. An American Superintendent named <span class="highlight">Mr. Khenly</span> came and promised the people to open a school if there was a school site. Immediately, <span class="highlight">Captain Roberto Saguilongan</span> donated 18 hectares as a school site. Most likely, in the Deed of Donation, it was registered as <span class="highlight">Malitbog</span> instead of Malibog. After his death, <span class="highlight">Captain Mayong</span>, also known as <span class="highlight">Doroteo Kilem</span>, became the next captain and headed the town for many, many years.
+                                
+                                <br><br>From this story, you can see that the founders of this town of Malitbog are the <span class="highlight">Saguilongan</span> and <span class="highlight">Kilem</span> families. What <span class="highlight">Malitbog</span> is today is largely owed to the contributions of these two families.
+                              </p>
+                        </div>
+                    </div>
+                </div>  
+                </div>
+            </div>
+        </div>
+
+        <footer id="contact" class="footer-section">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <!-- Emergency Hotlines Column -->
+                    <div class="footer-column hotlines-column">
+                        <h2>Emergency Hotlines</h2>
+                        <ul class="hotlines-list">
+                            <li class="">
+                                <strong>Police</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09162356818<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> MALITBOG Mps
+                            </li>
+                            <li>
+                                <strong>Fire Station</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09432459223<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Malitbog
+                            </li>
+                            <li>
+                                <strong>MDRRMO</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09777209125<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Mdrrmo Malitbog
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-column quick-links-column">
+                        <h2>Quick Links</h2>
+                        <ul class="quick-links-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#tourism">Tourism</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    
+
+</body>
+</html>

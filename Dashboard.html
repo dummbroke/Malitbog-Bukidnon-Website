@@ -46,7 +46,7 @@
 **************************************************************
 -->
 
-        <div class="nav-section">
+        <div id="home" class="nav-section">
             <div class="nav-title">
                 <h1>Malitbog</h1>
             </div>
@@ -92,7 +92,12 @@
                     <div class="welcome-content">
                         <h2>Welcome to the Official Website of the Local Government of Malitbog, Bukidnon!</h2>
                         <h3>We are thrilled to have you visit our website. Here, you'll discover the essence of Malitbog, a municipality rich in history, culture, and natural beauty. Whether you're exploring our community, planning a visit, or seeking business opportunities, we're here to assist you every step of the way.</h3>
-                        <button class="explore-btn">Explore Malitbog Today</button>
+                        <button class="see-more-btn" onclick="location.href='AboutPage.html'">Explore Destination</button>
+                        <script>
+                            document.querySelector(".see-more-btn").addEventListener("click", function() {
+                                window.location.href = "AboutPage.html";
+                            });
+                        </script>
                     </div>
                 </section>
             </div>
@@ -145,6 +150,25 @@
             });
         </script>
 
+        <script>
+                    document.querySelectorAll('.desktop-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor jump
+
+                const targetId = this.getAttribute('href').substring(1); // Get section ID
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, // Adjust for navbar height
+                        behavior: 'smooth' // Enables smooth scrolling
+                    });
+                }
+            });
+        });
+
+        </script>
+
 
 
         
@@ -156,7 +180,7 @@
 **************************************************************
 -->
 
-        <div class="news-section">
+        <div id="news" class="news-section">
             <div class="news-title">
                 <h1>Announcement and News</h1>
             </div>
@@ -169,7 +193,7 @@
                         JANUARY 4-5, 2025 MALITBOG PREGUNBAN SHOOTFEST 2025
                     </div>
                     <div class="event-image">
-                        <a href="https://www.facebook.com/share/p/15b9VpXQXC/">
+                        <a href="https://www.facebook.com/share/p/15b9VpXQXC/" target="_blank">
                             <img src="Image/event/latest/MALITBOG PREGUNBAN SHOOTFEST 2025.jpg"
                                 alt="MALITBOG PREGUNBAN SHOOTFEST 2025">
                         </a>
@@ -180,7 +204,7 @@
                         MISS MALITBOG TOURISM 2025
                     </div>
                     <div class="event-image">
-                        <a href="https://www.facebook.com/share/p/1PxJU57At3/">
+                        <a href="https://www.facebook.com/share/p/1PxJU57At3/" target="_blank">
                             <img src="Image/event/latest/MISS MALITBOG TOURISM.jpg"
                                 alt="MISS MALITBOG TOURISM">
                         </a>
@@ -197,7 +221,7 @@
                         2025 MALITBOG OPEN HIP-HOP DANCE COMPETITION
                     </div>
                     <div class="event-image">
-                        <a href="https://www.facebook.com/share/p/1XFAr3wsD8/">
+                        <a href="https://www.facebook.com/share/p/1XFAr3wsD8/" target="_blank">
                             <img src="Image/event/upcoming/2025 MALITBOG OPEN HIP-HOP DANCE COMPETITION.jpg"
                                 alt="2025 MALITBOG OPEN HIP-HOP DANCE COMPETITION">
                         </a>
@@ -208,7 +232,7 @@
                         MADI TELMA
                     </div>
                     <div class="event-image">
-                        <a href="https://www.facebook.com/share/p/162LFZE7Qr/">
+                        <a href="https://www.facebook.com/share/p/162LFZE7Qr/" target="_blank">
                             <img src="Image/event/upcoming/MADI TELMA.jpg"
                                 alt="MADI TELMA">
                         </a>
@@ -219,7 +243,7 @@
                         OPEN COMMERCIAL BASKETBALL LEAGUE 2025
                     </div>
                     <div class="event-image">
-                        <a href="https://www.facebook.com/share/p/15PJhp6Xvq/">
+                        <a href="https://www.facebook.com/share/p/15PJhp6Xvq/" target="_blank">
                             <img src="Image/event/upcoming/OPEN COMMERCIAL BASKETBALL LEAGUE 2025.jpg"
                                 alt="OPEN COMMERCIAL BASKETBALL LEAGUE 2025">
                         </a>
@@ -230,7 +254,7 @@
                         CHOCOLATE FACTORY AND BROWN REVIVAL CONCERT 2025
                     </div>
                     <div class="event-image">
-                        <a href="https://www.facebook.com/share/p/CHOCOLATEFACTORYCONCERT2025">
+                        <a href="https://www.facebook.com/share/p/CHOCOLATEFACTORYCONCERT2025" target="_blank">
                             <img src="Image/event/upcoming/CHOCOLATE FACTORY AND BROWN REVIVAL CONCERT 2025.jpg"
                                 alt="CHOCOLATE FACTORY AND BROWN REVIVAL CONCERT 2025">
                         </a>
@@ -247,7 +271,7 @@
 *                                                            *
 **************************************************************
 -->
-        <div class="about-section">
+        <div id="about" class="about-section">
             <div class="about-container">
                 <!-- About Section -->
                 <div class="about-title">
@@ -258,8 +282,8 @@
                     <!-- About Images -->
                     <div class="about-images">
                         <div class="about-image-wrapper">
-                            <img src="Image/about_img1.jpg" alt="Scenic View of Malitbog" class="about-img1">
-                            <img src="Image/about_img2.jpg" alt="Historical Site in Malitbog" class="about-img2">
+                            <img src="Image/about_img3.jpg" alt="Scenic View of Malitbog" class="about-img1">
+                            <img src="Image/about_img4.jpg" alt="Historical Site in Malitbog" class="about-img2">
                         </div>
                     </div>
             
@@ -268,9 +292,14 @@
                         <h2 class="news-sub1-title">History</h2>
                         <div class="short-story-content">
                             <h3>Legend of Malitbog</h3>
-                            <p>In the early 1700s, Malitbog was founded by a Datu and his three right-hand men. The Datu's daughter fell in love with a young harvester, leading to tragic events, including the deaths of the daughter and her lover due to the Datu's anger. Filled with remorse, the Datu named the town Malitbog in her memory. The Saguilongan and Kilem families also played significant roles in the town's development.</p>
+                            <p>In the early 1700s, <span class="highlight">Malitbog</span> was founded by a Datu and his three right-hand men. The Datu's daughter fell in love with a young harvester, leading to tragic events, including the deaths of the daughter and her lover due to the Datu's anger. Filled with remorse, the Datu named the town <span class="highlight">Malitbog</span> in her memory. The <span class="highlight">Saguilongan</span> and <span class="highlight">Kilem</span> families also played significant roles in the town's development.</p>
                         </div>
-                        <button class="continue-reading-btn">Continue Reading...</button>
+                        <button class="continue-reading-btn" onclick="location.href='HistoryPage.html'">Continue Reading...</button>
+                        <script>
+                            document.querySelector(".continue-reading-btn").addEventListener("click", function() {
+                                window.location.href = "HistoryPage.html";
+                            });
+                        </script>
                     </div>
                 </div>
             
@@ -279,8 +308,8 @@
                     <div class="culture-text">
                         <h2 class="culture-title">Culture</h2>
                         <div class="short-story-content">
-                            <p>Araw ng Malitbog (Kadisnon Festival) is one of the highlights of our cultural calendar. The annual festival, celebrated from December 14th to 16th, brings the community together in joyous festivities.</p>
-                        </div>
+                            <p><span class="highlight">Araw ng Malitbog (Kadisnon Festival)</span> is one of the highlights of our cultural calendar. The annual festival, celebrated from <span class="highlight">December 14th to 16th</span>, brings the community together in joyous festivities. The event features traditional dances, vibrant street parades, local music performances, and showcases of artisanal crafts. Visitors can immerse themselves in the rich heritage of <span class="highlight">Malitbog</span> by indulging in delicious local cuisine, experiencing historical reenactments, and participating in interactive cultural workshops. Each year, the festival also honors the town's history and traditions, providing a unique opportunity for both locals and tourists to connect and celebrate.</p>
+                        </div>                        
                     </div>
             
                     <!-- Culture Images -->
@@ -355,13 +384,10 @@
             <div class="geography-container">
                 <!-- Text Content -->
                 <div class="geography-text">
-                    <p>
-                        Malitbog is located at the northernmost part of the province, between parallel 8°25'35" and 8°36'8" North Latitude and Meridians 124°49'39" and 125°11'39" East Longitude. Malitbog is a landlocked municipality bounded on the north by the municipality of Claveria and on the western side by Tagoloan – both of which are part of Misamis Oriental. Bounding it on its southern part are the municipalities of Manolo Fortich and Impasugong of Bukidnon Province while on its eastern side is the municipality of Esperanza, Agusan del Sur.
+                    <p><span class="highlight">Malitbog</span> is located at the northernmost part of the province, between parallel <span class="highlight">8°25'35" and 8°36'8" North Latitude</span> and Meridians <span class="highlight">124°49'39" and 125°11'39" East Longitude</span>. <span class="highlight">Malitbog</span> is a landlocked municipality bounded on the north by the municipality of <span class="highlight">Claveria</span> and on the western side by <span class="highlight">Tagoloan</span> – both of which are part of <span class="highlight">Misamis Oriental</span>. Bounding it on its southern part are the municipalities of <span class="highlight">Manolo Fortich</span> and <span class="highlight">Impasugong</span> of <span class="highlight">Bukidnon Province</span>, while on its eastern side is the municipality of <span class="highlight">Esperanza, Agusan del Sur</span>.
                     </p>
-                    <p>
-                        The Municipality is about 40 kilometres (25 mi) from the regional capital – Cagayan de Oro City, and about 2½ hours ride from the Provincial Capital, Malaybalay City. It is reachable via Tagoloan and is approximately 2 hours ride from the City of Cagayan de Oro through secondary and first-class road types (gravel and concrete pavement).
+                    <p>The Municipality is about <span class="highlight">40 kilometres (25 mi)</span> from the regional capital – <span class="highlight">Cagayan de Oro City</span>, and about <span class="highlight">2½ hours</span> ride from the Provincial Capital, <span class="highlight">Malaybalay City</span>. It is reachable via <span class="highlight">Tagoloan</span> and is approximately <span class="highlight">2 hours</span> ride from the City of <span class="highlight">Cagayan de Oro</span> through secondary and first-class road types (gravel and concrete pavement).
                     </p>
-                    <button class="read-more-btn">Read More.</button>
                 </div>
         
                 <!-- Image Content -->
@@ -379,78 +405,173 @@
         
                 <!-- Text Content -->
                 <div class="geography-text2">
-                    <p>
-                        The climate in Malitbog is tropical, characterized by significant rainfall throughout the year. The town experiences a lush environment due to its consistent rain, making it a haven for agriculture. Additionally, Malitbog boasts diverse topography, with rolling hills, fertile plains, and scenic rivers.
+                    <p>The climate in <span class="highlight">Malitbog</span> is tropical, characterized by significant rainfall throughout the year. The town experiences a lush environment due to its consistent rain, making it a haven for <span class="highlight">agriculture</span>. Additionally, <span class="highlight">Malitbog</span> boasts diverse topography, with rolling hills, fertile plains, and scenic rivers.
                     </p>
-                    <p>
-                        Visitors to Malitbog are often mesmerized by its natural beauty and the rich biodiversity it supports, making it an ideal destination for eco-tourism and agriculture-related industries.
+                    <p>Visitors to <span class="highlight">Malitbog</span> are often mesmerized by its natural beauty and the rich biodiversity it supports, making it an ideal destination for <span class="highlight">eco-tourism</span> and <span class="highlight">agriculture-related industries</span>.
                     </p>
                 </div>
             </div>
-            <div class="tour-title">
-                <h1>Toursim</h1>
-            </div>
-        </div>
+    </div>
 
-        <div class="tour-container" style="position: relative;">
+    
+        <div id="tourism" class="tour-container" style="position: relative;">
+            <div class="tour-title">
+                <h1>Tourism</h1>
+            </div>
             <div class="tour-section">
                 
                 <div class="tour-slide">
     
-                    <div class="tour-item"
-                        style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+                    <div class="tour-item" style="background-image: url('Image/tourism/bagyangon_falls1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Switzerland</div>
-                            <div class="tour-des">X-Dev, Transforming code into visual poetry..!</div>
-                            <button class="see-more-btn">See More</button>
+                            <div class="tour-name">Bagyangon Falls</div>
+                            <div class="tour-des">A hidden paradise where cascading waterfalls meet nature’s untouched beauty, creating the perfect escape.</div>
+                            <button class="see-more-btn">Explore Destination</button>
                         </div>
                     </div>
-                    <div class="tour-item"
-                        style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/buklod_ridge1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Finland</div>
-                            <div class="tour-des">X-Dev, Transforming code into visual poetry..!</div>
-                            <button class="see-more-btn">See More</button>
+                            <div class="tour-name">Buklod Ridge</div>
+                            <div class="tour-des">A stunning ridge offering breathtaking views of Malitbog’s untouched landscapes – nature at its finest.</div>
+                            <button class="see-more-btn">Explore Destination</button>
                         </div>
                     </div>
-                    <div class="tour-item"
-                        style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/cafe_ilyona1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Iceland</div>
-                            <div class="tour-des">X-Dev, Transforming code into visual poetry..!</div>
-                            <button class="see-more-btn">See More</button>
+                            <div class="tour-name">Café Ilyona</div>
+                            <div class="tour-des">A cozy café in the heart of Omagling, serving good food and warm moments.</div>
+                            <button class="see-more-btn">Explore Destination</button>
                         </div>
                     </div>
-                    <div class="tour-item"
-                        style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/cold_spring1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Australia</div>
-                            <div class="tour-des">X-Dev, Transforming code into visual poetry..!</div>
-                            <button class="see-more-btn">See More</button>
+                            <div class="tour-name">Cold Spring Resort & Fish Farm</div>
+                            <div class="tour-des">Take a refreshing dip in the cold spring waters and experience the lush greenery of our thriving farm.</div>
+                            <button class="see-more-btn">Explore Destination</button>
                         </div>
                     </div>
-                    <div class="tour-item"
-                        style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/egoy\'s_cafe1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Netherland</div>
-                            <div class="tour-des">X-Dev, Transforming code into visual poetry..!</div>
-                            <button class="see-more-btn">See More</button>
+                            <div class="tour-name">Egoy's Cafe</div>
+                            <div class="tour-des">Sip your coffee while enjoying a picturesque countryside view at Egoy’s cozy café.</div>
+                            <button class="see-more-btn">Explore Destination</button>
                         </div>
                     </div>
-                    <div class="tour-item"
-                        style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/goldas_place1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Ireland</div>
-                            <div class="tour-des">X-Dev, Transforming code into visual poetry..! </div>
-                            <button class="see-more-btn">See More</button>
+                            <div class="tour-name">Golda's Place</div>
+                            <div class="tour-des">A breathtaking ridge-top retreat with panoramic mountain views and a perfect camping spot.</div>
+                            <button class="see-more-btn">Explore Destination</button>
                         </div>
                     </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/lanao_paradise1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Lanao Paradise</div>
+                            <div class="tour-des">A peaceful riverside retreat where nature’s calmness surrounds you.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/leropan_river1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Leropan River</div>
+                            <div class="tour-des">An untouched sanctuary where crystal-clear waters flow through a hidden cave system, offering adventure and tranquility.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/logdeck_river1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Logdeck River</div>
+                            <div class="tour-des">A pristine river with refreshingly cold waters, perfect for a rejuvenating escape into nature.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/lower_sampiano1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Lower Sampiano</div>
+                            <div class="tour-des">Serene and scenic – experience the peaceful flow of the Lower Sampiano River surrounded by nature’s beauty.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/lrc1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">LRC Diversified Farm</div>
+                            <div class="tour-des">A home away from home – experience farm life and reconnect with nature.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/malitbog_cultural1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Malitbog Cultural Center</div>
+                            <div class="tour-des">A hub of heritage and creativity, celebrating the rich culture of Malitbog.</div>
+                            <button class="see-more-btn">Explore Destinatione</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/min_sea1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Min Sea - Coffee Farm</div>
+                            <div class="tour-des">A haven for coffee lovers! Enjoy farm-to-table meals, scenic views, and the rich aroma of freshly brewed coffee.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/monte1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Monte Shannahs Farm</div>
+                            <div class="tour-des">Immerse yourself in the tranquility of Monte Shannahs Farm – where fresh air, green landscapes, and peaceful moments await.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/nzx1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">NZX Mountain Resort</div>
+                            <div class="tour-des">An escape into the cool mountain air! Savor local dishes and Bukidnon’s finest coffee while enjoying breathtaking views.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/paseo_de1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Paseo de Suello Resort</div>
+                            <div class="tour-des">Cool off in the refreshing waters of Paseo de Suello Resort – a perfect family getaway.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/paulas_mountain1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Paula’s Mountain Ridge</div>
+                            <div class="tour-des">A charming retreat where mountain views and a great cup of coffee create the ultimate relaxation spot.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-item" style="background-image: url('Image/tourism/rianne\'s_pad1.jpg');">
+                        <div class="tour-content">
+                            <div class="tour-name">Rianne’s Pad & Swimming Pool</div>
+                            <div class="tour-des">Plunge into relaxation at Rianne’s Pad – the perfect spot to refresh your soul.</div>
+                            <button class="see-more-btn">Explore Destination</button>
+                        </div>
+                    </div>
+                    
         
                 </div>
-        
                 <div class="tour-button">
                     <button class="prev">Prev</button>
                     <button class="next">Next</i></button>
+                    <button class="viewlall">View All</button>
                 </div>
             </div>
             </div>
@@ -476,35 +597,35 @@
 
 
 
-                <!--
-**************************************************************
-*                                                            *
-*                        Future Section                      *
-*                                                            *
-**************************************************************
--->
+                        <!--
+        **************************************************************
+        *                                                            *
+        *                        Footer Section                      *
+        *                                                            *
+        **************************************************************
+        -->
         
-        <footer class="footer-section">
+        <footer id="contact" class="footer-section">
             <div class="footer-container">
                 <div class="footer-row">
                     <!-- Emergency Hotlines Column -->
                     <div class="footer-column hotlines-column">
                         <h2>Emergency Hotlines</h2>
                         <ul class="hotlines-list">
-                            <li>
+                            <li class="">
                                 <strong>Police</strong><br>
-                                <img src="Image/fb_icon.png" alt="Facebook Icon" class="footer-icon"> 09162356818<br>
-                                <img src="Image/call_icon.png" alt="Call Icon" class="footer-icon"> MALITBOG Mps
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09162356818<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> MALITBOG Mps
                             </li>
                             <li>
                                 <strong>Fire Station</strong><br>
-                                <img src="Image/fb_icon.png" alt="Facebook Icon" class="footer-icon"> 09432459223<br>
-                                <img src="Image/call_icon.png" alt="Call Icon" class="footer-icon"> Malitbog, Bukidnon
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09432459223<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Malitbog
                             </li>
                             <li>
                                 <strong>MDRRMO</strong><br>
-                                <img src="Image/fb_icon.png" alt="Facebook Icon" class="footer-icon"> 09777209125<br>
-                                <img src="Image/call_icon.png" alt="Call Icon" class="footer-icon"> Mdrrmo Malitbog, Bukidnon
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09777209125<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Mdrrmo Malitbog
                             </li>
                         </ul>
                     </div>
@@ -521,8 +642,6 @@
                         </ul>
                     </div>
                 </div>
-
-                
             </div>
         </footer>
 

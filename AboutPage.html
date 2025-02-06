@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutPage.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+
+                
+                <!--
+        **************************************************************
+        *                                                            *
+        *                        Navigation Section                  *
+        *                                                            *
+        **************************************************************
+        -->
+
+        <div id="home" class="nav-section">
+            <div class="nav-title">
+                <h1>Malitbog</h1>
+            </div>
+        
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tourism">Tourism</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script>
+            document.querySelectorAll('.desktop-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor jump
+
+        const targetId = this.getAttribute('href').substring(1); // Get section ID
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 70, // Adjust for navbar height
+                behavior: 'smooth' // Enables smooth scrolling
+            });
+        }
+    });
+});
+
+</script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navSection = document.querySelector(".nav-section");
+                const placeholder = document.createElement("div");
+        
+                // Set placeholder height equal to nav height
+                placeholder.style.height = `${navSection.offsetHeight}px`;
+                placeholder.style.display = "none"; // Initially hidden
+        
+                // Insert placeholder before the nav
+                navSection.parentNode.insertBefore(placeholder, navSection);
+        
+                window.addEventListener("scroll", () => {
+                    if (window.pageYOffset > navSection.offsetTop) {
+                        navSection.classList.add("sticky-nav");
+                        placeholder.style.display = "block"; // Show placeholder to prevent shift
+                    } else {
+                        navSection.classList.remove("sticky-nav");
+                        placeholder.style.display = "none"; // Hide placeholder when not sticky
+                    }
+                });
+            });
+        </script>
+        
+
+                
+                        <!--
+        **************************************************************
+        *                                                            *
+        *                        About Section                       *
+        *                                                            *
+        **************************************************************
+        -->
+        <div id="about" class="about-section">
+            <div class="about-container">
+                <!-- About Section -->
+                <div class="about-title">
+                    <h1>About Malitbog</h1>
+                </div>
+            
+                <div class="history-content">
+                    <!-- About Images -->
+                    <div class="about-images">
+                        <div class="about-image-wrapper">
+                            <img src="Image/about_img3.jpg" alt="Scenic View of Malitbog" class="about-img1">
+                            <img src="Image/about_img4.jpg" alt="Historical Site in Malitbog" class="about-img2">
+                        </div>
+                    </div>
+            
+                    <!-- History Text -->
+                    <div class="about-text">
+                        <h2 class="news-sub1-title">History</h2>
+                        <div class="short-story-content">
+                            <h3>Legend of Malitbog</h3>
+                            <p>In the early 1700s, Malitbog was founded by a Datu and his three right-hand men. The Datu's daughter fell in love with a young harvester, leading to tragic events, including the deaths of the daughter and her lover due to the Datu's anger. Filled with remorse, the Datu named the town Malitbog in her memory. The Saguilongan and Kilem families also played significant roles in the town's development.</p>
+                        </div>
+                        <button class="continue-reading-btn">Continue Reading...</button>
+                    </div>
+                </div>
+            
+                <!-- Culture Section -->
+                <div class="culture-text-content">
+                    <div class="culture-text">
+                        <h2 class="culture-title">Culture</h2>
+                        <div class="short-story-content">
+                            <p>Araw ng Malitbog (Kadisnon Festival) is one of the highlights of our cultural calendar. The annual festival, celebrated from December 14th to 16th, brings the community together in joyous festivities. The event features traditional dances, vibrant street parades, local music performances, and showcases of artisanal crafts. Visitors can immerse themselves in the rich heritage of Malitbog by indulging in delicious local cuisine, experiencing historical reenactments, and participating in interactive cultural workshops. Each year, the festival also honors the town's history and traditions, providing a unique opportunity for both locals and tourists to connect and celebrate.</p>
+                        </div>
+                    </div>
+            
+                    <!-- Culture Images -->
+                    <div class="culture-images">
+                        <div class="culture-image-wrapper">
+                            <img src="Image/about_img1.jpg" alt="Festival Celebration" class="culture-img1">
+                            <img src="Image/about_img2.jpg" alt="Cultural Dance Performance" class="culture-img2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="culture-section">
+                <div class="culture-type-title">
+                    <h1>Culture</h1>
+                </div>
+                <div class="culture-wrapper">
+                    <div class="culture-container">
+                        <input type="radio" name="slide" id="c1" checked>
+                        <label for="c1" class="card">
+                            <div class="row">
+                                <div class="icon">1</div>
+                                <div class="description">
+                                    <h4>Street Dancing</h4>
+                                    <p>Witness energetic performances with traditional attire celebrating heritage.</p>
+                                </div>
+                            </div>
+                        </label>
+            
+                        <input type="radio" name="slide" id="c2">
+                        <label for="c2" class="card">
+                            <div class="row">
+                                <div class="icon">2</div>
+                                <div class="description">
+                                    <h4>Float Competition</h4>
+                                    <p>Marvel at creatively decorated floats showcasing Malitbog’s culture.</p>
+                                </div>
+                            </div>
+                        </label>
+            
+                        <input type="radio" name="slide" id="c3">
+                        <label for="c3" class="card">
+                            <div class="row">
+                                <div class="icon">3</div>
+                                <div class="description">
+                                    <h4>1KM Ginanggang Cookout</h4>
+                                    <p>Enjoy the unique cookout grilling bananas over open flames.</p>
+                                </div>
+                            </div>
+                        </label>
+            
+                        <input type="radio" name="slide" id="c4">
+                        <label for="c4" class="card">
+                            <div class="row">
+                                <div class="icon">4</div>
+                                <div class="description">
+                                    <h4>Boxing Sa Kawayan</h4>
+                                    <p>Experience traditional martial arts with bamboo sticks.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="geography-section">
+            <!-- First Section -->
+            <h2 class="section-title">Geography and Demographics</h2>
+            <div class="geography-container">
+                <!-- Text Content -->
+                <div class="geography-text">
+                    <p>
+                        Malitbog is located at the northernmost part of the province, between parallel 8°25'35" and 8°36'8" North Latitude and Meridians 124°49'39" and 125°11'39" East Longitude. Malitbog is a landlocked municipality bounded on the north by the municipality of Claveria and on the western side by Tagoloan – both of which are part of Misamis Oriental. Bounding it on its southern part are the municipalities of Manolo Fortich and Impasugong of Bukidnon Province while on its eastern side is the municipality of Esperanza, Agusan del Sur.
+                    </p>
+                    <p>
+                        The Municipality is about 40 kilometres (25 mi) from the regional capital – Cagayan de Oro City, and about 2½ hours ride from the Provincial Capital, Malaybalay City. It is reachable via Tagoloan and is approximately 2 hours ride from the City of Cagayan de Oro through secondary and first-class road types (gravel and concrete pavement).
+                    </p>
+                </div>
+
+                <!-- Image Content -->
+                <div class="geography-image">
+                    <img src="Image/Provincial-map-img.png" alt="Provincial Map of Bukidnon">
+                </div>
+            </div>
+
+            <!-- Second Section -->
+            <div class="geography-container reverse-layout">
+                <!-- Image Content -->
+                <div class="geography-image1">
+                    <img src="Image/Malitbog-map-img.png" alt="Malitbog Map">
+                </div>
+
+                <!-- Text Content -->
+                <div class="geography-text2">
+                    <p>
+                        The climate in Malitbog is tropical, characterized by significant rainfall throughout the year. The town experiences a lush environment due to its consistent rain, making it a haven for agriculture. Additionally, Malitbog boasts diverse topography, with rolling hills, fertile plains, and scenic rivers.
+                    </p>
+                    <p>
+                        Visitors to Malitbog are often mesmerized by its natural beauty and the rich biodiversity it supports, making it an ideal destination for eco-tourism and agriculture-related industries.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+                        <!--
+        **************************************************************
+        *                                                            *
+        *                        Footer Section                       *
+        *                                                            *
+        **************************************************************
+        -->
+        <footer id="contact" class="footer-section">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <!-- Emergency Hotlines Column -->
+                    <div class="footer-column hotlines-column">
+                        <h2>Emergency Hotlines</h2>
+                        <ul class="hotlines-list">
+                            <li class="">
+                                <strong>Police</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09162356818<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> MALITBOG Mps
+                            </li>
+                            <li>
+                                <strong>Fire Station</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09432459223<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Malitbog
+                            </li>
+                            <li>
+                                <strong>MDRRMO</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09777209125<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Mdrrmo Malitbog
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-column quick-links-column">
+                        <h2>Quick Links</h2>
+                        <ul class="quick-links-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#tourism">Tourism</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
