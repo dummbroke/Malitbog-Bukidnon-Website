@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Playfair';
     src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
@@ -56,7 +57,6 @@ html, body {
     margin: 0 auto;
     overflow: hidden; /* Ensure no overflow issues */
 }
-
 
 /* Navigation */
 .desktop-nav {
@@ -184,30 +184,37 @@ html, body {
     max-width: 1500px;
 }
 
-/* Additional margin for content when the navigation is sticky */
-.content-wrapper {
-    margin-top: 80px; /* Adjust this to match the height of your navigation bar */
-}
 
 
 
 
 
 
-
-/* News Section */
-.news-section {
-    background-color: #E6FFD4; /* Light background for contrast */
-    padding: 40px 20px; /* Space around the section */
+.tourist-section {
+    flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
     text-align: center; /* Center-align text content */
-    min-height: 1100px; /* Make section take full height of the viewport */
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 80px;
 }
 
-.news-title h1 {
+/* Ensure proper row spacing */
+.tourist-list {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Ensure items stretch equally */
+    justify-content: center; /* Center items */
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.tourist-title h1 {
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
     font-weight: bold;
@@ -218,86 +225,141 @@ html, body {
     transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
 }
 
-.news-title h1:hover {
+.tourist-title h1:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
     color: #28a745; /* Change color to green on hover, matching your theme */
 }
 
-.news-latest-updates-title h2,
-.news-upcoming-events-title h2 {
-    font-size: 30px;
-    font-family: Playfair;
-    color: #000000; /* Slightly lighter text */
-    margin-top: 20px;
-}
-
-/* News Container */
-.news-container {
-    display: flex; /* Align items horizontally */
-    flex-wrap: wrap; /* Wrap items if they don't fit in one row */
-    gap: 20px; /* Space between news cards */
-    justify-content: center; /* Center the content horizontally */
-    margin-top: 20px;
-}
-
-/* News Card */
-.news1 {
-    background: #f6ffe6; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    max-width: 300px; 
-    text-align: center; 
-    flex: 1 1 calc(33.333% - 40px); 
+.tourist-container {
+    width: calc(33.33% - 20px); /* Ensures 3 items per row with spacing */
+    background: #f6ffe6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 450px; /* Ensure enough space to prevent text overlap */
     transition: all 0.3s ease;
-    cursor: pointer;
+    padding-bottom: 20px;
 }
 
-.news1:hover {
+.tourist-container:hover {
     transform: translateY(-10px); /* Slight lift effect */
     box-shadow: 0 15px 30px rgba(72, 239, 128, 0.2); /* Enhanced shadow */
     background-color: #ccffd9 ; /* Slightly lighter background */
 }
 
-/* Event Image */
-.event-image img {
-    width: 100%; /* Make image responsive to card width */
-    height: 200px; /* Set a fixed height for uniformity */
-    object-fit: cover; /* Ensures the image fills the area without distortion */
-    border-radius: 4px; /* Smooth corners on images */
-    transition: transform 0.3s ease;
+
+.tourist-content .description {
+    margin-bottom: 5px;  /* Reduce excessive spacing */
+    padding: 0 10px;     /* Reduce side padding */
 }
 
-.news1:hover .event-image img {
-    transform: scale(1.05); /* Slight zoom on hover */
+.main-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-right: 300px;
 }
 
-/* News Title Hover Effect */
-.sub-sub-news-title {
-    font-size: 1rem;
-    font-family: Roboto;
-    color: #000000;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
+.main-image-container {
+    max-width: 100%; /* Ensures the container is responsive */
+    overflow: hidden; /* Prevents overflow */
+    height: 0;
+    padding-bottom: 66.66%; /* Aspect ratio (3:2) */
+    position: relative;
 }
 
-.news1:hover .sub-sub-news-title {
-    color: #388E3C ; /* Change text color on hover */
+.main-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
 }
 
-/* Stat-Style Number Animation */
-.stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+/* Ensure the container is responsive */
+.main-image-container {
+    max-width: 100%; /* Ensures the container is responsive */
+    overflow: hidden; /* Prevents overflow */
 }
 
-.news1:hover .stat-number {
+
+.tourist-content h2 {
+    margin: 5px 0;
+    font-family: PlayFair; /* Add your desired font here */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+}
+
+.tourist-content h3 {
+    margin: 5px 0;
+    font-family: PlayFair; /* Add your desired font here */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+}
+
+.tourist-content p {
+    margin: 5px 0;
+    padding: 0 10px;
+    font-family: Roboto Reg;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.tourist-content .view-location a {
+    text-decoration: underline;
+    color: #007BFF; /* Standard blue for links */
+    font-size: 1.2rem;
+    display: inline-block; /* Ensures proper padding effect */
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+.tourist-content .view-location a:hover {
+    color: #ff0000; /* Changes color to red on hover */
+    text-decoration: none; /* Removes underline on hover */
+}
+
+.welcome-section {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.welcome-section h3 {
+    font-size: 1.2rem;
+    font-family: OpenSans Light;
+    max-width: 1500px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+/* Initial state: hidden and slightly shifted down */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state: fully visible and in place */
+.show {
     opacity: 1;
-    transform: scale(1.1);
+    transform: translateY(0);
 }
+
+
+
+
+
+
+
+
 
 
 

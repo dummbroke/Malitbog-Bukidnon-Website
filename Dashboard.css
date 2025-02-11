@@ -261,6 +261,22 @@ header {
     margin-top: 80px; /* Adjust this to match the height of your navigation bar */
 }
 
+/* Active Navigation Link */
+.desktop-nav a.active {
+    color: #000;
+    transform: scale(1.2); /* Scale up the font size slightly */
+    font-family: Roboto Med; /* Change font weight smoothly */
+}
+
+.desktop-nav a.active::after {
+    width: 100%; /* Expands the underline */
+}
+
+
+  
+  
+
+
 
 
 
@@ -473,10 +489,12 @@ header {
 /* Event Image */
 .event-image img {
     width: 100%; /* Make image responsive to card width */
-    height: auto; /* Maintain aspect ratio */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
     border-radius: 4px; /* Smooth corners on images */
     transition: transform 0.3s ease;
 }
+
 
 .news1:hover .event-image img {
     transform: scale(1.05); /* Slight zoom on hover */
@@ -507,6 +525,18 @@ header {
     opacity: 1;
     transform: scale(1.1);
 }
+
+.hidden-news {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show-news {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
 
@@ -763,6 +793,10 @@ header {
 
 
 
+
+
+
+
 /* =============== 1ST CULTURE SECTION =============== */
 .culture-text-content {
     display: flex;
@@ -773,23 +807,23 @@ header {
     margin: 0 auto;
     flex-wrap: wrap; 
     gap: 10px;
-    opacity: 1; /* Ensure visibility */
+    opacity: 1; 
     transform: translateY(0); 
     transition: all 0.8s ease;
     margin-top: 100px;
 }
 
-/* Text Section */
+/* Text Section!!!!!! */
 .culture-text {
     flex: 3; 
     color: #000000;
-    text-align: cen; /* Align text to the left */
+    text-align: cen; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
-    align-items: flex-start; /* Align content to the start (left) */
-    padding: 20px; /* Add padding for spacing */
-    margin: 0; /* Remove unnecessary margins */
+    align-items: flex-start; 
+    padding: 20px; 
+    margin: 0; 
     margin-right: -150px;
     margin-left: -50px;
     margin-top: 20px;
@@ -878,7 +912,6 @@ header {
 
 /* Culture Section Styling */
 
-
 .culture-section .culture-type-title {
 margin-top: 60px;
 }
@@ -900,11 +933,15 @@ margin-top: 60px;
 
 .culture-wrapper {
     width: 100%;
-    height: 85vh;
+    min-height: 500px; /* Allow dynamic height */
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Helps prevent overflow issues */
+    margin-top: 70px;
+    padding-bottom: 30px;
 }
+
 
 .culture-container {
     height: 500px;

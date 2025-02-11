@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malitbog Municipality</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -48,17 +50,16 @@
 
         <div id="home" class="nav-section">
             <div class="nav-title">
-                <h1>Malitbog</h1>
+            <h1>Malitbog</h1>
             </div>
-
             <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tourism">Tourism</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tourism">Tourism</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
             </nav>
         </div>
 
@@ -166,8 +167,41 @@
                 }
             });
         });
-
         </script>
+    
+    <script>
+        document.addEventListener("scroll", () => {
+            const sections = document.querySelectorAll("div[id], footer[id]"); // Select only divs and footers with IDs
+            const navLinks = document.querySelectorAll(".desktop-nav a"); // Select all navigation links
+        
+            let currentSection = "";
+        
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+        
+                // Check if the section is in view
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSection = section.getAttribute("id");
+                }
+            });
+        
+            // Apply 'active' class to the correct nav link
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").substring(1) === currentSection) {
+                    link.classList.add("active");
+                }
+            });
+        });
+        </script>
+        
+    
+    
+    
+    
+
+        
 
 
 
@@ -262,6 +296,31 @@
                 </div>
             </div>
         </div>
+
+        <script>document.addEventListener("DOMContentLoaded", function () {
+            const newsCards = document.querySelectorAll(".news1");
+        
+            const observerOptions = {
+                root: null, // Uses viewport
+                threshold: 0.2, // Triggers when 20% of the element is visible
+            };
+        
+            const newsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show-news");
+                        observer.unobserve(entry.target); // Remove observer after animation
+                    }
+                });
+            }, observerOptions);
+        
+            newsCards.forEach(card => {
+                card.classList.add("hidden-news"); // Initially hide the cards
+                newsObserver.observe(card);
+            });
+        });
+        </script>
+
         
 
                 <!--
@@ -412,7 +471,6 @@
                 </div>
             </div>
     </div>
-
     
         <div id="tourism" class="tour-container" style="position: relative;">
             <div class="tour-title">
@@ -426,7 +484,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Bagyangon Falls</div>
                             <div class="tour-des">A hidden paradise where cascading waterfalls meet nature’s untouched beauty, creating the perfect escape.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://www.google.com/maps/dir/8.5356293,124.8796262/GXVG%2BCQ7+Bagyangon+Falls+Drop+Off+Point,+Malitbog,+Bukidnon/@8.5338911,124.9090465,8995m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc5a23f80b423:0x4bebb5636d54be2f!2m2!1d124.9769279!2d8.5435261!3e0?entry=tts&g_ep=EgoyMDI0MDgyOC4wKgBIAVAD', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -434,7 +494,10 @@
                         <div class="tour-content">
                             <div class="tour-name">Buklod Ridge</div>
                             <div class="tour-des">A stunning ridge offering breathtaking views of Malitbog’s untouched landscapes – nature at its finest.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/RfBmcWn6HPHpoUFH9', '_blank');">
+                                Explore Destination
+                            </button>
+                            
                         </div>
                     </div>
                     
@@ -442,15 +505,19 @@
                         <div class="tour-content">
                             <div class="tour-name">Café Ilyona</div>
                             <div class="tour-des">A cozy café in the heart of Omagling, serving good food and warm moments.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/7DL6pVZMNzsHGx1k9', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
                     <div class="tour-item" style="background-image: url('Image/tourism/cold_spring1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Cold Spring Resort & Fish Farm</div>
+                            <div class="tour-name">Big Boss Cold Spring Resort & Fish Farm</div>
                             <div class="tour-des">Take a refreshing dip in the cold spring waters and experience the lush greenery of our thriving farm.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/EnzDzr62aFsSag5z7', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -458,7 +525,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Egoy's Cafe</div>
                             <div class="tour-des">Sip your coffee while enjoying a picturesque countryside view at Egoy’s cozy café.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/GD7Cb5iiuUM2VvqbA', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -466,23 +535,29 @@
                         <div class="tour-content">
                             <div class="tour-name">Golda's Place</div>
                             <div class="tour-des">A breathtaking ridge-top retreat with panoramic mountain views and a perfect camping spot.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/DHA77ZjetqH6aAAd9', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
                     <div class="tour-item" style="background-image: url('Image/tourism/lanao_paradise1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Lanao Paradise</div>
+                            <div class="tour-name">Lunao Paradise</div>
                             <div class="tour-des">A peaceful riverside retreat where nature’s calmness surrounds you.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/VmyZonw7VTU4ubsP7', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
                     <div class="tour-item" style="background-image: url('Image/tourism/leropan_river1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Leropan River</div>
+                            <div class="tour-name">Leropan River and Cave</div>
                             <div class="tour-des">An untouched sanctuary where crystal-clear waters flow through a hidden cave system, offering adventure and tranquility.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/pH6LsJvwCtdPxeep8', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -490,15 +565,19 @@
                         <div class="tour-content">
                             <div class="tour-name">Logdeck River</div>
                             <div class="tour-des">A pristine river with refreshingly cold waters, perfect for a rejuvenating escape into nature.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/J9BLpMJZDfxshhJ47', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
                     <div class="tour-item" style="background-image: url('Image/tourism/lower_sampiano1.jpg');">
                         <div class="tour-content">
-                            <div class="tour-name">Lower Sampiano</div>
+                            <div class="tour-name">Lower Sampiano River View</div>
                             <div class="tour-des">Serene and scenic – experience the peaceful flow of the Lower Sampiano River surrounded by nature’s beauty.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/nS2wfgWFeggZdmk3A', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -506,7 +585,9 @@
                         <div class="tour-content">
                             <div class="tour-name">LRC Diversified Farm</div>
                             <div class="tour-des">A home away from home – experience farm life and reconnect with nature.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/xYoB3nC7R8tjawfC7', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -514,7 +595,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Malitbog Cultural Center</div>
                             <div class="tour-des">A hub of heritage and creativity, celebrating the rich culture of Malitbog.</div>
-                            <button class="see-more-btn">Explore Destinatione</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/vWskdNcqo8Crvj4u5', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -522,7 +605,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Min Sea - Coffee Farm</div>
                             <div class="tour-des">A haven for coffee lovers! Enjoy farm-to-table meals, scenic views, and the rich aroma of freshly brewed coffee.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/CVCsCCoHgcXs53h58', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -530,7 +615,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Monte Shannahs Farm</div>
                             <div class="tour-des">Immerse yourself in the tranquility of Monte Shannahs Farm – where fresh air, green landscapes, and peaceful moments await.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/hGQD5eciVwBdU2di6', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -538,7 +625,9 @@
                         <div class="tour-content">
                             <div class="tour-name">NZX Mountain Resort</div>
                             <div class="tour-des">An escape into the cool mountain air! Savor local dishes and Bukidnon’s finest coffee while enjoying breathtaking views.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/K5T3AwsXxDAi9Z6m6', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -546,7 +635,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Paseo de Suello Resort</div>
                             <div class="tour-des">Cool off in the refreshing waters of Paseo de Suello Resort – a perfect family getaway.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/BcjA9RjoN3iuHT1e8', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -554,7 +645,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Paula’s Mountain Ridge</div>
                             <div class="tour-des">A charming retreat where mountain views and a great cup of coffee create the ultimate relaxation spot.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/Qs4MsdyEU4jx2iXR8', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -562,7 +655,9 @@
                         <div class="tour-content">
                             <div class="tour-name">Rianne’s Pad & Swimming Pool</div>
                             <div class="tour-des">Plunge into relaxation at Rianne’s Pad – the perfect spot to refresh your soul.</div>
-                            <button class="see-more-btn">Explore Destination</button>
+                            <button class="see-more-btn" onclick="window.open('https://maps.app.goo.gl/RGWu7fm5gKvwJzwj7', '_blank');">
+                                Explore Destination
+                            </button>
                         </div>
                     </div>
                     
@@ -571,7 +666,7 @@
                 <div class="tour-button">
                     <button class="prev">Prev</button>
                     <button class="next">Next</i></button>
-                    <button class="viewlall">View All</button>
+                    <button class="cta-button" onclick="location.href='TourismPage.html';">Explore More</button>
                 </div>
             </div>
             </div>
@@ -652,5 +747,8 @@
         
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>

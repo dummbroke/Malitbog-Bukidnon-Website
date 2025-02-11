@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tourism</title>
+    <link rel="stylesheet" href="TourismPage.css">
+</head>
+<body>
+    <div class="wrapper">
+            
+                    
+                    <!--
+            **************************************************************
+            *                                                            *
+            *                        Navigation Section                  *
+            *                                                            *
+            **************************************************************
+            -->
+
+            <div id="home" class="nav-section">
+                <div class="nav-title">
+                    <h1>Malitbog</h1>
+                </div>
+            
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="Dashboard.html">Home</a></li>
+                        <li><a href="NewsPage.html">News</a></li>
+                        <li><a href="AboutPage.html">About</a></li>
+                        <li><a href="TourismPage.html">Tourism</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <script>
+                document.querySelectorAll('.desktop-nav a').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        // Allow default action for links to external HTML files
+                        if (this.getAttribute('href').endsWith('.html')) {
+                            return;
+                        }
+            
+                        e.preventDefault(); // Prevent default anchor jump for section links
+            
+                        const targetId = this.getAttribute('href').substring(1); // Get section ID
+                        const targetSection = document.getElementById(targetId);
+            
+                        if (targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 70, // Adjust for navbar height
+                                behavior: 'smooth' // Enables smooth scrolling
+                            });
+                        }
+                    });
+                });
+            </script>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const navSection = document.querySelector(".nav-section");
+                    const placeholder = document.createElement("div");
+            
+                    // Set placeholder height equal to nav height
+                    placeholder.style.height = `${navSection.offsetHeight}px`;
+                    placeholder.style.display = "none"; // Initially hidden
+            
+                    // Insert placeholder before the nav
+                    navSection.parentNode.insertBefore(placeholder, navSection);
+            
+                    window.addEventListener("scroll", () => {
+                        if (window.pageYOffset > navSection.offsetTop) {
+                            navSection.classList.add("sticky-nav");
+                            placeholder.style.display = "block"; // Show placeholder to prevent shift
+                        } else {
+                            navSection.classList.remove("sticky-nav");
+                            placeholder.style.display = "none"; // Hide placeholder when not sticky
+                        }
+                    });
+                });
+            </script> 
+
+
+
+
+
+
+
+
+
+            <div class="tourist-section">
+                <div class="tourist-title">
+                    <h1>Tourism</h1>
+                </div>
+
+                <div class="welcome-section">
+                    <h3>
+                        Discover breathtaking landscapes, refreshing waters, and warm hospitality. 
+                        From majestic waterfalls to charming cafés, every destination offers a unique experience. 
+                        Whether you seek adventure or tranquility, Malitbog invites you to explore its wonders.
+                    </p>
+                </div>
+                
+                <div class="tourist-list">
+
+                    <div class="tourist-container">
+                        <!-- Image Section -->
+                        <div class="tourist-image">
+                            <img src="Image/tourism/goldas_place1.jpg" alt="Golda's Place Image" class="main-image">
+                        </div>
+                        <!-- Information Section -->
+                        <div class="tourist-content">
+                            <h1>Golda’s Place</h1>
+                            <p class="description">An enchanting mountain ridge offering breathtaking views and a serene campground setting.</p>
+                            <h2>Location</h2>
+                            <p>Kalingking, Malitbog, Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/8.5055624,124.9144723/@8.5204431,124.8868669,4086m/data=!3m1!1e3!4m2!4m1!3e0?entry=tts&g_ep=EgoyMDI0MDgyOC4wKgBIAVAD" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Clint Dave L. Dancil</p>
+                            <h3>Contact Number</h3>
+                            <p>0946 669 3508</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/bagyangon_falls1.jpg" alt="Bagyangon Falls Image" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Bagyangon Falls</h1>
+                            <p class="description">A hidden gem where nature’s tranquility and breathtaking landscapes come together to create a perfect escape.</p>
+                            <h2>Location</h2>
+                            <p>Bagyangon, Sanluis, Malitbog, Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/GXVG%2BCQ7+Bagyangon+Falls+Drop+Off+Point,+Malitbog,+Bukidnon/@8.5338911,124.9090465,8995m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc5a23f80b423:0x4bebb5636d54be2f!2m2!1d124.9769279!2d8.5435261!3e0?entry=tts&g_ep=EgoyMDI0MDgyOC4wKgBIAVAD" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Melchor Gaspar</p>
+                            <h3>Contact Number</h3>
+                            <p>0917 718 1856</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/lower_sampiano1.jpg" alt="Lower Sampiano River View" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Lower Sampiano River View</h1>
+                            <p class="description">Where the serene beauty of nature meets the flowing waters of the Lower Sampiano River.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Lower, Sampiano, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5354081,124.8796256/8.4723266,124.8606224/@8.5040269,124.8470025,13403m/data=!3m2!1e3!4b1!4m5!4m4!1m0!1m1!4e1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Keen Thomas</p>
+                            <h3>Contact Number</h3>
+                            <p>0946 669 3508</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/leropan_river1.jpg" alt="Leropan River and Cave" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Leropan River and Cave</h1>
+                            <p class="description">A pristine haven where cold, clear waters flow through untouched natural beauty.</p>
+                            <h2>Location</h2>
+                            <p>Kiabo, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/8.5805862,124.9291186/8.5812816,124.9298457/@8.558197,124.8989565,6701m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>0930 591 1321</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/logdeck_river1.jpg" alt="Logdeck River" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Logdeck River</h1>
+                            <p class="description">Experience the refreshing embrace of Logdeck River, with its cold, crystal-clear waters.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Logdeck, Sanluis, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/8.5572597,125.0221235/@8.5475489,124.9254218,13402m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>Blank</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/buklod_ridge1.jpg" alt="Buklod Ridge" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Buklod Ridge</h1>
+                            <p class="description">Witness breathtaking views from Buklod Ridge, where nature reveals its finest.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Nabalabag Malandang, Siloo, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/8.4957533,124.9372777/@8.517691,124.9032329,6701m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>Local Tourism Office</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/lanao_paradise1.jpg" alt="Lunao Paradise" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Lunao Paradise</h1>
+                            <p class="description">Discover the tranquil beauty of Lunao Paradise, nestled along the river.</p>
+                            <h2>Location</h2>
+                            <p>Poblacion, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/Lunao+Paradise+Resort/@8.5370969,124.8801223,419m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc3908cfa9ebf:0xf174c675af97f693!2m2!1d124.8805776!2d8.5385726!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>0906 780 0285</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/egoy's_cafe1.jpg" alt="Egoy's Cafe" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Egoy's Cafe</h1>
+                            <p class="description">Relax and enjoy the view at Egoy’s charming café.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Dambaan, Sanluis, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/Egoys+cafe/@8.532608,124.9055379,6701m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc593c86903f9:0x75a88418afe1b652!2m2!1d124.9584763!2d8.5457731!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Ray O. Calapis</p>
+                            <h3>Contact Number</h3>
+                            <p>0906 485 9888</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/min_sea1.jpg" alt="Min Sea - Coffee Farm" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Min Sea - Coffee Farm</h1>
+                            <p class="description">Indulge in cozy accommodations, farm-to-table meals, and endless coffee delights amidst stunning views.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Man-ay, Mindagat, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/Min+Sea+Coffee+farm+resort/@8.5541865,124.8794834,6701m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc3a2e092180f:0xe7ce3f18c6b98f9!2m2!1d124.8925399!2d8.5731703!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>0927 366 7081</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/monte1.jpg" alt="Monte Shannahs Farms" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Monte Shannahs Farms</h1>
+                            <p class="description">Experience the charm of Monte Shannahs Farm, where nature and tranquility meet.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Lake, Sanluis, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/Monte+Shannahs+Farms,+HX6J%2B9CH,+Malitbog,+Bukidnon/@8.5420011,124.9072801,13402m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc4ef2865bea9:0x13ffdbc4ffd33dba!2m2!1d124.9811115!2d8.5609466!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Maria Zenaida Q. Leonen</p>
+                            <h3>Contact Number</h3>
+                            <p>0917 718 1856</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/paulas_mountain1.jpg" alt="Paula's Mountain Ridge" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Paula's Mountain Ridge</h1>
+                            <p class="description">Serene beauty and a perfect cup of coffee await at Paula’s Mountain Ridge.</p>
+                            <h2>Location</h2>
+                            <p>Barangay Kiabo, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/Paula's+Mountain+Ridge,+HWXV%2B3XG,+Claveria,+Misamis+Oriental/@8.5573366,124.8993472,13402m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffddd6fcaf96a7:0xc82136e27f929a0f!2m2!1d124.9449462!2d8.5976815!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Paula Ragandang</p>
+                            <h3>Contact Number</h3>
+                            <p>0910 026 3248</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/paseo_de1.jpg" alt="Paseo de Suello Resort" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Paseo de Suello Resort</h1>
+                            <p class="description">Enjoy refreshing dips at Paseo de Suello Resort.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Villamangga, Kalingking, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/Paseo+de+Suello+Resort,+GWC5%2B85Q,+Malitbog,+Bukidnon/@8.529519,124.8870683,2798m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc36cc8230fdb:0x1efa6281c2aeea40!2m2!1d124.9079968!2d8.5208446!3e0?entry=tts&g_ep=EgoyMDI0MDgyOC4wKgBIAVAD" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Myrna Halinon</p>
+                            <h3>Contact Number</h3>
+                            <p>0963 982 6835</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/malitbog_cultural1.jpg" alt="Malitbog Cultural Center" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Malitbog Cultural Center</h1>
+                            <p class="description">A vibrant hub of heritage and creativity.</p>
+                            <h2>Location</h2>
+                            <p>Poblacion, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/8.5345249,124.8834744/@8.5351606,124.8807935,419m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>Blank</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/nzx1.jpg" alt="NZX Mountain Resort" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>NZX Mountain Resort</h1>
+                            <p class="description">Escape to the serene heights of NZX Mountain Resort, where every bite comes with a breathtaking view.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Batal, Omagling, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/NZX+Mountain+Resort,+HW66%2B85,+Malitbog,+Bukidnon/@8.5541791,124.8829267,6701m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc30012c1c72f:0x6c29e4a2ef6d1c96!2m2!1d124.9103868!2d8.5608654!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Mitregene Tamayo</p>
+                            <h3>Contact Number</h3>
+                            <p>0953 543 4649</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/cold_spring1.jpg" alt="Big Boss Cold Spring Resort and Fish Farm" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Big Boss Cold Spring Resort and Fish Farm</h1>
+                            <p class="description">Unwind in the peaceful cold spring waters and explore our lush farmlands.</p>
+                            <h2>Location</h2>
+                            <p>Sabangaan, San Luis, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/Big+Boss+Cold+Spring+Resort+%26+Fish+Farm,+HX6X%2BGJ8,+Sitio+sabangaan+Barangay,+Malitbog,+8704+Bukidnon/@8.5453755,124.9178445,13402m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc5b7ad3a583f:0x1d32da0fbe04b7b5!2m2!1d124.9990852!2d8.5612766!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Rodolfo F. Fadrilan</p>
+                            <h3>Contact Number</h3>
+                            <p>0961 443 2293</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/rianne's_pad1.jpg" alt="Rianne's Pad & Swimming Pool" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Rianne's Pad & Swimming Pool</h1>
+                            <p class="description">Dive in and refresh your soul.</p>
+                            <h2>Location</h2>
+                            <p>Zone 1 Poblacion, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/8.5339919,124.8781964/@8.5347842,124.8786117,419m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Azilanna Achas</p>
+                            <h3>Contact Number</h3>
+                            <p>0956 637 8972</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/lrc1.jpg" alt="LRC Diversified Farm" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>LRC Diversified Farm</h1>
+                            <p class="description">Feel at home at LRC Diversified Farm.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Gam-oc Anahaw, Mindagat Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/LRC+DIVERSIFIED+FARM,+HV4G%2BWX3,+Anahaw,+Malitbog,+Bukidnon/@8.5467058,124.8782928,3350m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc364c10be40b:0xdbaf1bf07c982d2b!2m2!1d124.8773939!2d8.5572966!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Eleneta A. Caballero</p>
+                            <h3>Contact Number</h3>
+                            <p>0926 597 3907 / 0955 992 3954</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/cafe_ilyona1.jpg" alt="Cafe Ilyona" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Cafe Ilyona</h1>
+                            <p class="description">Enjoy a cozy atmosphere and delightful treats at Cafe Ilyona.</p>
+                            <h2>Location</h2>
+                            <p>Omagling, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356214,124.8795849/cafe+ilyona,+GWR2%2BM68,+Omagling,+Bukidnon/@8.5383519,124.8860825,3351m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc3002d4105d9:0x3d4515fc72ffb90a!2m2!1d124.9005771!2d8.5416515!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Blank</p>
+                            <h3>Contact Number</h3>
+                            <p>0927 303 3361</p>
+                        </div>
+                    </div>
+            </div>
+            <script>document.addEventListener("DOMContentLoaded", function () {
+                // Select all elements with the 'tourist-container' class
+                const containers = document.querySelectorAll(".tourist-container");
+            
+                // Observer options: trigger when 20% of the element is visible in the viewport
+                const observerOptions = {
+                    root: null,      // Use the viewport as container
+                    threshold: 0.2,  // Trigger when 20% of the element is visible
+                };
+            
+                // Create the Intersection Observer
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Add a slight delay (e.g., 100ms) before adding the 'show' class
+                            setTimeout(() => {
+                                entry.target.classList.add("show");
+                            }, 100);
+                            // Stop observing this element once it's been triggered
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+            
+                // Initialize each tourist-container: add the hidden state and start observing
+                containers.forEach(container => {
+                    container.classList.add("hidden");
+                    observer.observe(container);
+                });
+            });
+            
+            </script>
+    </div>
+    
+                        <!--
+        **************************************************************
+        *                                                            *
+        *                        Footer Section                      *
+        *                                                            *
+        **************************************************************
+        -->
+        
+        <footer id="contact" class="footer-section">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <!-- Emergency Hotlines Column -->
+                    <div class="footer-column hotlines-column">
+                        <h2>Emergency Hotlines</h2>
+                        <ul class="hotlines-list">
+                            <li class="">
+                                <strong>Police</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09162356818<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> MALITBOG Mps
+                            </li>
+                            <li>
+                                <strong>Fire Station</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09432459223<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Malitbog
+                            </li>
+                            <li>
+                                <strong>MDRRMO</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09777209125<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Mdrrmo Malitbog
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-column quick-links-column">
+                        <h2>Quick Links</h2>
+                        <ul class="quick-links-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#tourism">Tourism</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>History</title>
     <link rel="stylesheet" href="HistoryPage.css">
 </head>
 <body>
@@ -24,34 +24,38 @@
         
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tourism">Tourism</a></li>
+                    <li><a href="Dashboard.html">Home</a></li>
+                    <li><a href="NewsPage.html">News</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                    <li><a href="TourismPage.html">Tourism</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
-
+        
         <script>
-                    document.querySelectorAll('.desktop-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor jump
-
-                const targetId = this.getAttribute('href').substring(1); // Get section ID
-                const targetSection = document.getElementById(targetId);
-
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 70, // Adjust for navbar height
-                        behavior: 'smooth' // Enables smooth scrolling
-                    });
-                }
+            document.querySelectorAll('.desktop-nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    // Allow default action for links to external HTML files
+                    if (this.getAttribute('href').endsWith('.html')) {
+                        return;
+                    }
+        
+                    e.preventDefault(); // Prevent default anchor jump for section links
+        
+                    const targetId = this.getAttribute('href').substring(1); // Get section ID
+                    const targetSection = document.getElementById(targetId);
+        
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70, // Adjust for navbar height
+                            behavior: 'smooth' // Enables smooth scrolling
+                        });
+                    }
+                });
             });
-        });
-
         </script>
-
+        
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const navSection = document.querySelector(".nav-section");
@@ -74,7 +78,9 @@
                     }
                 });
             });
-        </script>
+        </script>        
+        
+        
 
                         <!--
         **************************************************************
@@ -147,7 +153,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <!-- Quick Links Column -->
                     <div class="footer-column quick-links-column">
                         <h2>Quick Links</h2>

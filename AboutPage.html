@@ -27,34 +27,38 @@
         
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tourism">Tourism</a></li>
+                    <li><a href="Dashboard.html">Home</a></li>
+                    <li><a href="NewsPage.html">News</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                    <li><a href="TourismPage.html">Tourism</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
-
+        
         <script>
             document.querySelectorAll('.desktop-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default anchor jump
-
-        const targetId = this.getAttribute('href').substring(1); // Get section ID
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 70, // Adjust for navbar height
-                behavior: 'smooth' // Enables smooth scrolling
+                anchor.addEventListener('click', function(e) {
+                    // Allow default action for links to external HTML files
+                    if (this.getAttribute('href').endsWith('.html')) {
+                        return;
+                    }
+        
+                    e.preventDefault(); // Prevent default anchor jump for section links
+        
+                    const targetId = this.getAttribute('href').substring(1); // Get section ID
+                    const targetSection = document.getElementById(targetId);
+        
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70, // Adjust for navbar height
+                            behavior: 'smooth' // Enables smooth scrolling
+                        });
+                    }
+                });
             });
-        }
-    });
-});
-
-</script>
-
+        </script>
+        
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const navSection = document.querySelector(".nav-section");
@@ -77,7 +81,7 @@
                     }
                 });
             });
-        </script>
+        </script>               
         
 
                 
@@ -111,7 +115,12 @@
                             <h3>Legend of Malitbog</h3>
                             <p>In the early 1700s, Malitbog was founded by a Datu and his three right-hand men. The Datu's daughter fell in love with a young harvester, leading to tragic events, including the deaths of the daughter and her lover due to the Datu's anger. Filled with remorse, the Datu named the town Malitbog in her memory. The Saguilongan and Kilem families also played significant roles in the town's development.</p>
                         </div>
-                        <button class="continue-reading-btn">Continue Reading...</button>
+                        <button class="continue-reading-btn" onclick="location.href='HistoryPage.html'">Continue Reading...</button>
+                        <script>
+                            document.querySelector(".continue-reading-btn").addEventListener("click", function() {
+                                window.location.href = "HistoryPage.html";
+                            });
+                        </script>
                     </div>
                 </div>
             

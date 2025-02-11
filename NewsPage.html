@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="NewsPage.css">
+</head>
+<body>
+
+    <div class="wrapper">
+                        
+
+                        
+                <!--
+        **************************************************************
+        *                                                            *
+        *                        Navigation Section                  *
+        *                                                            *
+        **************************************************************
+        -->
+
+        <div id="home" class="nav-section">
+            <div class="nav-title">
+                <h1>Malitbog</h1>
+            </div>
+        
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="Dashboard.html">Home</a></li>
+                    <li><a href="NewsPage.html">News</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                    <li><a href="TourismPage.html">Tourism</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.desktop-nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    // Allow default action for links to external HTML files
+                    if (this.getAttribute('href').endsWith('.html')) {
+                        return;
+                    }
+        
+                    e.preventDefault(); // Prevent default anchor jump for section links
+        
+                    const targetId = this.getAttribute('href').substring(1); // Get section ID
+                    const targetSection = document.getElementById(targetId);
+        
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70, // Adjust for navbar height
+                            behavior: 'smooth' // Enables smooth scrolling
+                        });
+                    }
+                });
+            });
+        </script>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navSection = document.querySelector(".nav-section");
+                const placeholder = document.createElement("div");
+        
+                // Set placeholder height equal to nav height
+                placeholder.style.height = `${navSection.offsetHeight}px`;
+                placeholder.style.display = "none"; // Initially hidden
+        
+                // Insert placeholder before the nav
+                navSection.parentNode.insertBefore(placeholder, navSection);
+        
+                window.addEventListener("scroll", () => {
+                    if (window.pageYOffset > navSection.offsetTop) {
+                        navSection.classList.add("sticky-nav");
+                        placeholder.style.display = "block"; // Show placeholder to prevent shift
+                    } else {
+                        navSection.classList.remove("sticky-nav");
+                        placeholder.style.display = "none"; // Hide placeholder when not sticky
+                    }
+                });
+            });
+        </script>        
+
+                <!--
+        **************************************************************
+        *                                                            *
+        *                        News Section                        *
+        *                                                            *
+        **************************************************************
+        -->
+
+        <div id="news" class="news-section">
+            <div class="news-title">
+                <h1>Announcement and News</h1>
+            </div>
+            <div class="news-latest-updates-title">
+                <h2>Latest Updates:</h2>
+            </div>
+            <div class="news-container">
+                <div class="news1">
+                    <div class="sub-sub-news-title">
+                        JANUARY 4-5, 2025 MALITBOG PREGUNBAN SHOOTFEST 2025
+                    </div>
+                    <div class="event-image">
+                        <a href="https://www.facebook.com/share/p/15b9VpXQXC/" target="_blank">
+                            <img src="Image/event/latest/MALITBOG PREGUNBAN SHOOTFEST 2025.jpg"
+                                alt="MALITBOG PREGUNBAN SHOOTFEST 2025">
+                        </a>
+                    </div>
+                </div>
+                <div class="news1">
+                    <div class="sub-sub-news-title">
+                        MISS MALITBOG TOURISM 2025
+                    </div>
+                    <div class="event-image">
+                        <a href="https://www.facebook.com/share/p/1PxJU57At3/" target="_blank">
+                            <img src="Image/event/latest/MISS MALITBOG TOURISM.jpg"
+                                alt="MISS MALITBOG TOURISM">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-upcoming-events-title">
+                <h2>Upcoming Events:</h2>
+            </div>
+            <div class="news-container">
+                <div class="news1">
+                    <div class="sub-sub-news-title">
+                        2025 MALITBOG OPEN HIP-HOP DANCE COMPETITION
+                    </div>
+                    <div class="event-image">
+                        <a href="https://www.facebook.com/share/p/1XFAr3wsD8/" target="_blank">
+                            <img src="Image/event/upcoming/2025 MALITBOG OPEN HIP-HOP DANCE COMPETITION.jpg"
+                                alt="2025 MALITBOG OPEN HIP-HOP DANCE COMPETITION">
+                        </a>
+                    </div>
+                </div>
+                <div class="news1">
+                    <div class="sub-sub-news-title">
+                        MADI TELMA
+                    </div>
+                    <div class="event-image">
+                        <a href="https://www.facebook.com/share/p/162LFZE7Qr/" target="_blank">
+                            <img src="Image/event/upcoming/MADI TELMA.jpg"
+                                alt="MADI TELMA">
+                        </a>
+                    </div>
+                </div>
+                <div class="news1">
+                    <div class="sub-sub-news-title">
+                        OPEN COMMERCIAL BASKETBALL LEAGUE 2025
+                    </div>
+                    <div class="event-image">
+                        <a href="https://www.facebook.com/share/p/15PJhp6Xvq/" target="_blank">
+                            <img src="Image/event/upcoming/OPEN COMMERCIAL BASKETBALL LEAGUE 2025.jpg"
+                                alt="OPEN COMMERCIAL BASKETBALL LEAGUE 2025">
+                        </a>
+                    </div>
+                </div>
+                <div class="news1">
+                    <div class="sub-sub-news-title">
+                        CHOCOLATE FACTORY AND BROWN REVIVAL CONCERT 2025
+                    </div>
+                    <div class="event-image">
+                        <a href="https://www.facebook.com/share/p/CHOCOLATEFACTORYCONCERT2025" target="_blank">
+                            <img src="Image/event/upcoming/CHOCOLATE FACTORY AND BROWN REVIVAL CONCERT 2025.jpg"
+                                alt="CHOCOLATE FACTORY AND BROWN REVIVAL CONCERT 2025">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+                        <!--
+        **************************************************************
+        *                                                            *
+        *                        Footer Section                       *
+        *                                                            *
+        **************************************************************
+        -->
+        <footer id="contact" class="footer-section">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <!-- Emergency Hotlines Column -->
+                    <div class="footer-column hotlines-column">
+                        <h2>Emergency Hotlines</h2>
+                        <ul class="hotlines-list">
+                            <li class="">
+                                <strong>Police</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09162356818<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> MALITBOG Mps
+                            </li>
+                            <li>
+                                <strong>Fire Station</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09432459223<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Malitbog
+                            </li>
+                            <li>
+                                <strong>MDRRMO</strong><br>
+                                <img src="Image/call_icon.png" alt="Facebook Icon" class="footer-icon"> 09777209125<br>
+                                <img src="Image/fb_icon.png" alt="Call Icon" class="footer-icon"> Mdrrmo Malitbog
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-column quick-links-column">
+                        <h2>Quick Links</h2>
+                        <ul class="quick-links-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#news">News</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#tourism">Tourism</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
