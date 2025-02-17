@@ -49,7 +49,7 @@ body, h1, h2, h3, ul, li, a, button {
 /* Wrapper */
 .wrapper {
     max-width: 1500px;
-    background-color: #E6FFD4;
+    background-color: #fffbce;
     margin: 0 auto;
     overflow: hidden; /* Ensure no overflow issues */
 }
@@ -64,7 +64,7 @@ body, h1, h2, h3, ul, li, a, button {
 .desktop-nav {
     display: flex;
     justify-content: center;
-    background-color: #33333300; /* Transparent background */
+    background-color: #1b5e20; /* Transparent background */
     padding: 10px 0;
 }
 
@@ -78,7 +78,7 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .desktop-nav a {
-    color: #fff;
+    color: #effded;
     font-family: Roboto Reg;
     font-size: 16px;
     text-transform: uppercase;
@@ -86,14 +86,14 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .desktop-nav a:hover {
-    color: #000;
+    color: #effded;
     transform: scale(1.2); /* Scale up the font size slightly */
     font-family: Roboto Med; /* Change font weight smoothly */
 }
 
 /* Navigation Section */
 .nav-section {
-    background-color: #a6ff67;
+    background-color: #1b5e20;
     padding: 10px 20px;
     display: flex;
     justify-content: center; /* Center the container */
@@ -117,7 +117,7 @@ body, h1, h2, h3, ul, li, a, button {
     font-size: 40px;
     font-weight: bold;
     margin: 0;
-    color: #000000;
+    color: #effded;
 }
 
 /* Desktop Navigation */
@@ -143,7 +143,7 @@ body, h1, h2, h3, ul, li, a, button {
 
 /* Enhanced Navigation Link Hover */
 .desktop-nav a {
-    color: #fff;
+    color: #effded;
     font-family: Roboto;
     font-size: 20px;
     text-transform: uppercase;
@@ -154,7 +154,7 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .desktop-nav a:hover {
-    color: #000;
+    color: #effded;
     transform: scale(1.1); /* Slightly enlarges the link */
 }
 
@@ -166,7 +166,7 @@ body, h1, h2, h3, ul, li, a, button {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #000; /* Color of the underline */
+    background-color: #effded; /* Color of the underline */
     transition: width 0.3s ease;
 }
 
@@ -204,7 +204,7 @@ body, h1, h2, h3, ul, li, a, button {
 .history-section {
     margin-top: 45px;
     text-align: center; /* Center-align text by default */
-    background-color: #E6FFD4;
+    background-color: #fffbce;
     padding-bottom: 50px;
 }
 
@@ -222,7 +222,7 @@ body, h1, h2, h3, ul, li, a, button {
     font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
     font-size: 3.5rem; 
     font-weight: bold;
-    color: #000; 
+    color: #1b5e20; 
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
     letter-spacing: 1px; /* Slightly increase letter spacing for readability */
@@ -231,14 +231,14 @@ body, h1, h2, h3, ul, li, a, button {
 
 .history-title h1:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
-    color: #28a745; /* Change color to green on hover, matching your theme */
+    color: #51c155; /* Change color to green on hover, matching your theme */
 }
 
 
 /* Right side: Text styling */
 .history-text {
     flex: 1; /* Adjust to allow equal spacing if needed */
-    color: #000000;
+    color: #1b5e20;
     margin: 0 auto; /* Center horizontally */
     text-align: center; /* Centers the text inside the box */
     display: flex; /* Enables flexbox for centering */
@@ -259,7 +259,7 @@ body, h1, h2, h3, ul, li, a, button {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #000000; /* Dark gray for better readability */
+    color: #1b5e20; /* Dark gray for better readability */
     text-align: justify;
     padding: 0 10%;
     margin-top: 10px;
@@ -269,7 +269,7 @@ body, h1, h2, h3, ul, li, a, button {
 
 /* Highlighted text styling */
 .highlight {
-    color: #28a745; /* Dark green for emphasis */
+    color: #1b5e20; /* Dark green for emphasis */
     font-weight: bold;
     background-color: rgba(211, 47, 47, 0.1); /* Light red highlight */
     padding: 2px 4px;
@@ -285,10 +285,18 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 
+
+
+
+
+
+
+
+
 /* Footer Section */
 .footer-section {
-    background-color: #28a745; /* Darker green tone for contrast */
-    color: #ffffff; /* Accent color for text */
+    background-color: #1b5e20; /* Darker green tone for contrast */
+    color: #effded;
     padding: 4rem 0 8rem;
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -326,7 +334,7 @@ body, h1, h2, h3, ul, li, a, button {
 
 .hotlines-column h2 {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #effded;
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -355,7 +363,7 @@ body, h1, h2, h3, ul, li, a, button {
 .hotlines-list li strong {
     display: block;
     margin-bottom: 0.5rem;
-    color: #FFFFFF;
+    color: #effded;
 }
 
 .hotlines-list li img.footer-icon {
@@ -374,7 +382,7 @@ body, h1, h2, h3, ul, li, a, button {
 
 .quick-links-column h2 {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #effded;
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -386,7 +394,7 @@ body, h1, h2, h3, ul, li, a, button {
 }
 
 .quick-links-list li a {
-    color: #ffffff;
+    color: #effded;
     text-decoration: none;
     padding: 0.8rem;
     border-radius: 8px;
@@ -402,7 +410,7 @@ body, h1, h2, h3, ul, li, a, button {
     top: 0;
     width: 3px;
     height: 100%;
-    background: #A6FF67;
+    background: #51c155;
     transform: scaleY(0);
     transition: transform 0.2s ease;
 }

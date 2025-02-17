@@ -1,0 +1,512 @@
+
+@media (max-width: 1024px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+    /* Header Section */
+    .header-background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        height: 130px; 
+    }
+
+
+    .header-container {
+        padding: 15px;
+    }
+
+
+    .logo1 img {
+        width: 400px; 
+        height: auto;
+        margin-left: -100px;
+        margin-top: 50px;
+    }
+
+    .logo2 img {
+        width: 250px;
+        height: auto;
+        margin-right: -30px;
+        margin-top: 30px;
+    }
+
+    .header-title {
+        margin-top: 5px;
+        transform: translateX(-20px); 
+    }
+
+    .header-title h1 {
+        font-size: 20px;
+        -webkit-text-stroke: 1.5px rgb(0, 0, 0); 
+        max-width: 420px;
+    }
+
+
+
+
+
+
+     /* Slider Section */
+    .slider-container {
+        height: 700px; 
+    }
+
+
+    .content-wrapper {
+        max-width: 1300px; 
+        padding: 30px 15px; 
+        top: 55%;        
+    }
+
+    .welcome {
+        margin-bottom: 80px;  
+    }
+
+    .welcome-logos {
+        display: flex;
+        justify-content: center;
+        gap: 500px;          
+        margin-bottom: 30px; 
+    }
+
+    .welcome-logos img {
+        width: 100px;         
+        height: auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 3.6rem;    
+        margin-left: 100px;    
+        margin-right: 100px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.2rem;     
+        margin-left: 100px;   
+        margin-right: 100px;
+    }
+
+
+    .see-more-btn-home {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -100px;
+        margin-right: -50px;
+    }
+
+    .short-story-content p {
+        font-size: 1rem;
+       }
+
+    .culture-text {
+        margin-right: -100px;
+        margin-left: -50px;
+    }
+    
+    .about-image-wrapper {
+        margin-left: -100px;
+      }
+
+    .culture-image-wrapper {
+        margin-right: -100px;
+      }
+
+    .culture-img1, .culture-img2 {
+        width: 230px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 230px;
+    }
+
+    .about-images::before {
+        margin-top: 20px;
+        height: 205px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 205px;
+    }
+
+    .card {
+        width: 100px;
+    }
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        width: 480px;
+        margin-right: -40px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        width: 750px;
+        margin-left: -130px;
+        margin-top: 40px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-left: 30px;
+        font-size: 1rem;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -130px;
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+
+
+
+    
+
+
+    /* Tour Section */
+
+    .tour-container {
+        max-height: 900px;
+    }
+    .tour-container .tour-title h1 {
+        margin-bottom: -20px;
+
+    }
+
+    .tour-section {
+        height: 650px;
+    }
+
+    .tour-item .tour-content {
+        margin-left: 220px;
+        top: 50%;
+    }
+
+
+
+
+
+    .footer-section {
+        max-height: 750px;
+    }
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 150px;
+        height: 640px;
+        margin-top: -40px;
+      }
+    
+      .hotlines-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+       
+      .quick-links-column {
+        margin-right: 200px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 830px) {
+    .nav-section {
+        height: 85px;
+    }
+
+    .desktop-nav {
+        display: none; /* Hide Desktop Nav */
+    }
+
+    .burger-menu {
+        display: block; /* Show Burger Menu */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+    /* Header Section */
+    .header-background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        height: 130px;
+        display: none;
+    }
+
+    .nav-section {
+        height: 70px;
+    }
+    .nav-title h1{
+        font-size: 35px;
+    }
+
+    .desktop-nav {
+        display: none; /* Hide desktop nav on mobile */
+      }
+      
+      .burger-menu {
+        display: block; /* Show burger menu on mobile */
+      }
+
+
+
+
+
+
+
+     /* Slider Section */
+    .slider-container {
+        height: 700px; 
+    }
+
+    .content-wrapper {
+        max-width: 1300px;
+        padding: 30px 15px;
+        top: 55%;
+    }
+
+    .welcome {
+        margin-bottom: 80px;
+    }
+
+    .welcome-logos {
+        display: flex;
+        justify-content: center;
+        gap: 300px;
+        margin-bottom: 30px;
+    }
+
+    .welcome-logos img {
+        width: 100px;         
+        height: auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 3rem;    
+        margin-left: 100px;    
+        margin-right: 100px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.2rem;     
+        margin-left: 100px;   
+        margin-right: 100px;
+    }
+
+
+    .see-more-btn-home {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+
+
+
+
+
+    /*News Section*/
+    .news1 {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      
+      /* Hide the image container */
+      .event-image {
+        display: none;
+      }
+
+      .sub-sub-news-title {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+      }
+
+      .news1:hover {
+        display: none;
+      }
+
+
+
+
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -100px;
+        margin-right: -50px;
+    }
+
+    .short-story-content p {
+        font-size: 1rem;
+       }
+
+    .culture-text {
+        margin-right: -100px;
+        margin-left: -50px;
+    }
+    
+    .about-image-wrapper {
+        margin-left: -100px;
+      }
+
+    .culture-image-wrapper {
+        margin-right: -100px;
+      }
+
+    .culture-img1, .culture-img2 {
+        width: 230px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 230px;
+    }
+
+    .about-images::before {
+        margin-top: 20px;
+        height: 205px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 205px;
+    }
+
+    .card {
+        width: 100px;
+    }
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        width: 480px;
+        margin-right: -40px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        width: 750px;
+        margin-left: -130px;
+        margin-top: 40px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-left: 30px;
+        font-size: 1rem;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -130px;
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+
+
+
+    
+
+
+    /* Tour Section */
+
+    .tour-container {
+        max-height: 900px;
+    }
+    .tour-container .tour-title h1 {
+        margin-bottom: -20px;
+
+    }
+
+    .tour-section {
+        height: 650px;
+    }
+
+    .tour-item .tour-content {
+        margin-left: 220px;
+        top: 50%;
+    }
+
+
+
+
+
+    .footer-section {
+        max-height: 750px;
+    }
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 150px;
+        height: 640px;
+        margin-top: -40px;
+      }
+    
+      .hotlines-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+       
+      .quick-links-column {
+        margin-right: 200px;
+      }
+}

@@ -58,6 +58,12 @@ html, body {
     overflow: hidden; /* Ensure no overflow issues */
 }
 
+
+
+
+
+
+
 /* Navigation */
 .desktop-nav {
     display: flex;
@@ -76,7 +82,7 @@ html, body {
 }
 
 .desktop-nav a {
-    color: #fff;
+    color: #effded;
     font-family: Roboto Reg;
     font-size: 16px;
     text-transform: uppercase;
@@ -91,7 +97,7 @@ html, body {
 
 /* Navigation Section */
 .nav-section {
-    background-color: #a6ff67;
+    background-color: #1b5e20;
     padding: 10px 20px;
     display: flex;
     justify-content: center; /* Center the container */
@@ -115,7 +121,7 @@ html, body {
     font-size: 40px;
     font-weight: bold;
     margin: 0;
-    color: #000000;
+    color: #effded;
 }
 
 /* Desktop Navigation */
@@ -141,8 +147,8 @@ html, body {
 
 /* Enhanced Navigation Link Hover */
 .desktop-nav a {
-    color: #fff;
-    font-family: Roboto;
+    color: #effded;
+    font-family: Roboto Reg;
     font-size: 20px;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -152,8 +158,9 @@ html, body {
 }
 
 .desktop-nav a:hover {
-    color: #000;
-    transform: scale(1.1); /* Slightly enlarges the link */
+    color: #effded;
+    transform: scale(1.2); /* Scale up the font size slightly */
+    font-family: Roboto Med; /* Change font weight smoothly */
 }
 
 /* Underline Animation */
@@ -164,7 +171,7 @@ html, body {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #000; /* Color of the underline */
+    background-color: #effded; /* Color of the underline */
     transition: width 0.3s ease;
 }
 
@@ -184,6 +191,21 @@ html, body {
     max-width: 1500px;
 }
 
+/* Additional margin for content when the navigation is sticky */
+.content-wrapper {
+    margin-top: 80px; /* Adjust this to match the height of your navigation bar */
+}
+
+/* Active Navigation Link */
+.desktop-nav a.active {
+    color: #effded;
+    transform: scale(1.2); /* Scale up the font size slightly */
+    font-family: Roboto Med; /* Change font weight smoothly */
+}
+
+.desktop-nav a.active::after {
+    width: 100%; /* Expands the underline */
+}
 
 
 
@@ -200,6 +222,9 @@ html, body {
     gap: 20px;
     padding: 20px;
     padding-bottom: 80px;
+    padding-top: 35px;
+    color: #1b5e20;
+    background-color: #fffbce;
 }
 
 /* Ensure proper row spacing */
@@ -218,7 +243,7 @@ html, body {
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
     font-weight: bold;
-    color: #000000; /* Darker text for readability */
+    color: #1b5e20; /* Darker text for readability */
     margin-bottom: 10px;
     margin-top: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
@@ -227,7 +252,7 @@ html, body {
 
 .tourist-title h1:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
-    color: #28a745; /* Change color to green on hover, matching your theme */
+    color: #51c155; /* Change color to green on hover, matching your theme */
 }
 
 .tourist-container {
@@ -295,6 +320,7 @@ html, body {
     font-family: PlayFair; /* Add your desired font here */
     font-size: 1.5rem; /* Adjust font size as needed */
     font-weight: bold; /* Adjust font weight as needed */
+    color: #1b5e20;
 }
 
 .tourist-content h3 {
@@ -302,6 +328,7 @@ html, body {
     font-family: PlayFair; /* Add your desired font here */
     font-size: 1.5rem; /* Adjust font size as needed */
     font-weight: bold; /* Adjust font weight as needed */
+    color: #1b5e20;
 }
 
 .tourist-content p {
@@ -310,6 +337,7 @@ html, body {
     font-family: Roboto Reg;
     font-size: 1.2rem;
     font-weight: normal;
+    color: #1b5e20;
 }
 
 .tourist-content .view-location a {
@@ -338,6 +366,7 @@ html, body {
     max-width: 1500px;
     margin: 0 auto 20px;
     line-height: 1.6;
+    color: #1b5e20;
 }
 
 /* Initial state: hidden and slightly shifted down */
@@ -368,8 +397,8 @@ html, body {
 
 /* Footer Section */
 .footer-section {
-    background-color: #28a745; /* Darker green tone for contrast */
-    color: #ffffff; /* Accent color for text */
+    background-color: #1b5e20; /* Darker green tone for contrast */
+    color: #effded;
     padding: 4rem 0 8rem;
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -407,7 +436,7 @@ html, body {
 
 .hotlines-column h2 {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #effded;
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -436,7 +465,7 @@ html, body {
 .hotlines-list li strong {
     display: block;
     margin-bottom: 0.5rem;
-    color: #FFFFFF;
+    color: #effded;
 }
 
 .hotlines-list li img.footer-icon {
@@ -455,7 +484,7 @@ html, body {
 
 .quick-links-column h2 {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #effded;
     margin: 2rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -467,7 +496,7 @@ html, body {
 }
 
 .quick-links-list li a {
-    color: #ffffff;
+    color: #effded;
     text-decoration: none;
     padding: 0.8rem;
     border-radius: 8px;
@@ -483,7 +512,7 @@ html, body {
     top: 0;
     width: 3px;
     height: 100%;
-    background: #A6FF67;
+    background: #51c155;
     transform: scaleY(0);
     transition: transform 0.2s ease;
 }

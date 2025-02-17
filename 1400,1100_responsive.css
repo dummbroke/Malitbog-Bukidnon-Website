@@ -1,0 +1,816 @@
+@media (max-width: 1400px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+
+    /* Header Section */
+    .header-background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        height: 180px; 
+    }
+
+
+    .header-container {
+        padding: 15px;
+    }
+
+
+    .logo1 img {
+        width: 550px; 
+        height: auto;
+        margin-left: -100px;
+        margin-top: 50px;
+    }
+
+    .logo2 img {
+        width: 400px;
+        height: auto;
+        margin-right: -30px;
+        margin-top: 30px;
+    }
+
+    .header-title {
+        margin-top: 5px;
+        transform: translateX(-20px); 
+    }
+
+    .header-title h1 {
+        font-size: 26px;
+        -webkit-text-stroke: 1.5px rgb(0, 0, 0); 
+        max-width: 500px;
+    }
+
+
+
+
+
+
+
+
+     /* Slider Section */
+    .slider-container {
+        height: 800px; 
+    }
+
+
+    .content-wrapper {
+        max-width: 1400px; 
+        padding: 30px 15px; 
+        top: 55%;        
+    }
+
+
+    .welcome {
+        margin-bottom: 80px;  
+    }
+
+    .welcome-logos {
+        display: flex;
+        justify-content: center;
+        gap: 650px;          
+        margin-bottom: 30px; 
+    }
+
+    .welcome-logos img {
+        width: 120px;         
+        height: auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 4.3rem;    
+        margin-left: 100px;    
+        margin-right: 100px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.8rem;     
+        margin-left: 100px;   
+        margin-right: 100px;
+    }
+
+
+    .see-more-btn-home {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -30px;
+    }
+
+    .culture-text {
+        margin-right: -30px;
+    }
+
+    .culture-img1, .culture-img2 {
+        width: 280px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 280px;
+    }
+
+
+
+
+      /* Tour Section */
+    .tour-item .tour-content {
+        margin-left: 35px;
+        top: 50%;
+    }
+
+
+
+    .geography-image img {
+        max-width: 70%;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 70%;
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -25px;
+    }
+
+
+
+    
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 100px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 200px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+    /* Header Section */
+    .header-background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        height: 160px; 
+    }
+
+
+    .header-container {
+        padding: 15px;
+    }
+
+
+    .logo1 img {
+        width: 500px; 
+        height: auto;
+        margin-left: -100px;
+        margin-top: 50px;
+    }
+
+    .logo2 img {
+        width: 350px;
+        height: auto;
+        margin-right: -30px;
+        margin-top: 30px;
+    }
+
+    .header-title {
+        margin-top: 5px;
+        transform: translateX(-20px); 
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+        -webkit-text-stroke: 1.5px rgb(0, 0, 0); 
+        max-width: 500px;
+    }
+
+
+
+
+
+
+     /* Slider Section */
+    .slider-container {
+        height: 800px; 
+    }
+
+
+    .content-wrapper {
+        max-width: 1300px; 
+        padding: 30px 15px; 
+        top: 55%;        
+    }
+
+    .welcome {
+        margin-bottom: 80px;  
+    }
+
+    .welcome-logos {
+        display: flex;
+        justify-content: center;
+        gap: 650px;          
+        margin-bottom: 30px; 
+    }
+
+    .welcome-logos img {
+        width: 120px;         
+        height: auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 4rem;    
+        margin-left: 100px;    
+        margin-right: 100px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.6rem;     
+        margin-left: 100px;   
+        margin-right: 100px;
+    }
+
+
+    .see-more-btn-home {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -50px;
+    }
+
+    .culture-text {
+        margin-right: -50px;
+    }
+
+    .culture-img1, .culture-img2 {
+        width: 260px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 260px;
+    }
+
+    .about-images::before {
+        margin-top: 20px;
+        height: 250px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 250px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        max-width: 70%;
+        margin-right: 50px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 70%;
+        margin-left: -50px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-right: -60px;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -50px;
+        
+    }
+
+
+
+    
+
+
+    /* Tour Section */
+    .tour-item .tour-content {
+        margin-left: 60px;
+        top: 50%;
+    }
+
+
+
+
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 100px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 200px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+    /* Header Section */
+    .header-background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        height: 160px; 
+    }
+
+
+    .header-container {
+        padding: 15px;
+    }
+
+
+    .logo1 img {
+        width: 500px; 
+        height: auto;
+        margin-left: -100px;
+        margin-top: 50px;
+    }
+
+    .logo2 img {
+        width: 350px;
+        height: auto;
+        margin-right: -30px;
+        margin-top: 30px;
+    }
+
+    .header-title {
+        margin-top: 5px;
+        transform: translateX(-20px); 
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+        -webkit-text-stroke: 1.5px rgb(0, 0, 0); 
+        max-width: 500px;
+    }
+
+
+
+
+
+
+     /* Slider Section */
+    .slider-container {
+        height: 800px; 
+    }
+
+
+    .content-wrapper {
+        max-width: 1300px; 
+        padding: 30px 15px; 
+        top: 55%;        
+    }
+
+    .welcome {
+        margin-bottom: 80px;  
+    }
+
+    .welcome-logos {
+        display: flex;
+        justify-content: center;
+        gap: 650px;          
+        margin-bottom: 30px; 
+    }
+
+    .welcome-logos img {
+        width: 120px;         
+        height: auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 4rem;    
+        margin-left: 100px;    
+        margin-right: 100px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.6rem;     
+        margin-left: 100px;   
+        margin-right: 100px;
+    }
+
+
+    .see-more-btn-home {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -120px;
+    }
+
+    .culture-text {
+        margin-right: -120px;
+    }
+    
+    .about-image-wrapper {
+        margin-left: -100px;
+      }
+
+    .culture-image-wrapper {
+        margin-right: -100px;
+      }
+
+    .culture-img1, .culture-img2 {
+        width: 230px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 230px;
+    }
+
+    .about-images::before {
+        margin-top: 20px;
+        height: 215px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 215px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        max-width: 70%;
+        margin-right: 50px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 70%;
+        margin-left: -50px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-right: -60px;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -100px;
+        
+    }
+
+
+
+    
+
+
+    /* Tour Section */
+
+    .tour-container {
+        max-height: 900px;
+    }
+    .tour-container .tour-title h1 {
+        margin-bottom: -20px;
+
+    }
+
+    .tour-section {
+        height: 650px;
+    }
+
+    .tour-item .tour-content {
+        margin-left: 150px;
+        top: 50%;
+    }
+
+
+
+
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 60px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 150px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+    /* Header Section */
+    .header-background {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        height: 130px; 
+    }
+
+
+    .header-container {
+        padding: 15px;
+    }
+
+
+    .logo1 img {
+        width: 400px; 
+        height: auto;
+        margin-left: -100px;
+        margin-top: 50px;
+    }
+
+    .logo2 img {
+        width: 250px;
+        height: auto;
+        margin-right: -30px;
+        margin-top: 30px;
+    }
+
+    .header-title {
+        margin-top: 5px;
+        transform: translateX(-20px); 
+    }
+
+    .header-title h1 {
+        font-size: 20px;
+        -webkit-text-stroke: 1.5px rgb(0, 0, 0); 
+        max-width: 420px;
+    }
+
+
+
+
+
+
+     /* Slider Section */
+    .slider-container {
+        height: 700px; 
+    }
+
+
+    .content-wrapper {
+        max-width: 1300px; 
+        padding: 30px 15px; 
+        top: 55%;        
+    }
+
+    .welcome {
+        margin-bottom: 80px;  
+    }
+
+    .welcome-logos {
+        display: flex;
+        justify-content: center;
+        gap: 650px;          
+        margin-bottom: 30px; 
+    }
+
+    .welcome-logos img {
+        width: 120px;         
+        height: auto;
+    }
+
+    .welcome-content h2 {
+        font-size: 3.8rem;    
+        margin-left: 100px;    
+        margin-right: 100px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.4rem;     
+        margin-left: 100px;   
+        margin-right: 100px;
+    }
+
+
+    .see-more-btn-home {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -120px;
+    }
+
+    .culture-text {
+        margin-right: -120px;
+    }
+    
+    .about-image-wrapper {
+        margin-left: -100px;
+      }
+
+    .culture-image-wrapper {
+        margin-right: -100px;
+      }
+
+    .culture-img1, .culture-img2 {
+        width: 230px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 230px;
+    }
+
+    .about-images::before {
+        margin-bottom: 20px;
+        height: 220px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 220px;
+    }
+
+    .card {
+        width: 100px;
+    }
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        max-width: 75%;
+        margin-right: -10px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 65%;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-right: -100px;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -100px;
+        
+    }
+
+
+
+    
+
+
+    /* Tour Section */
+
+    .tour-container {
+        max-height: 900px;
+    }
+    .tour-container .tour-title h1 {
+        margin-bottom: -20px;
+
+    }
+
+    .tour-section {
+        height: 650px;
+    }
+
+    .tour-item .tour-content {
+        margin-left: 180px;
+        top: 50%;
+    }
+
+
+
+
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 20px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 90px;
+      }
+}
