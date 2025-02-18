@@ -892,16 +892,15 @@ margin-top: 60px;
 
 .culture-wrapper {
     width: 100%;
-    min-height: 500px; /* Allow dynamic height */
+    min-height: 500px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Helps prevent overflow issues */
+    flex-wrap: wrap; 
     margin-top: 70px;
     padding-bottom: 30px;
     padding-bottom: 80px;
 }
-
 
 .culture-container {
     height: 500px;
@@ -1118,19 +1117,19 @@ input:checked + label .description {
 
 .tour-container .tour-title {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 100%; /* Ensures the height of the container is taken into account */
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
 }
 
 .tour-container .tour-title h1 {
     font-size: 3.5rem;
-    font-family: 'Playfair Display', serif; /* Ensure the font is properly referenced */
+    font-family: 'Playfair Display', serif;
     color: #1b5e20;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
-    letter-spacing: 1px; /* Slightly increase letter spacing for readability */
-    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
     margin-top: 70px;
 }
 
