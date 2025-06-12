@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="1400,1100_responsive.css">
     <link rel="stylesheet" href="1024_responsive.css">
+    <link rel="stylesheet" href="375_responsive.css">
 
     
 </head>
@@ -253,6 +254,25 @@
         });
         </script>
         
+
+        <script>
+            document.querySelectorAll('.mobile-nav a').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default jump
+                const targetId = this.getAttribute('href').substring(1); // Get the section ID
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                  window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Adjust offset if needed
+                    behavior: 'smooth' // Smooth scroll
+                  });
+                }
+                // Optional: hide the mobile nav after clicking the link
+                document.querySelector('.mobile-nav').classList.remove('active');
+              });
+            });
+        </script>
+          
     
     
     
@@ -513,7 +533,7 @@
             </div>
         
             <!-- Second Section -->
-            <div class="geography-container reverse-layout">
+            <div class="geography-container-reverse-layout">
                 <!-- Image Content -->
                 <div class="geography-image1">
                     <img src="Image/Malitbog-map-img.png" alt="Malitbog Map">
@@ -533,6 +553,104 @@
             <div class="tour-title">
                 <h1>Tourism</h1>
             </div>
+
+
+        <div class="tourist-mobile-section">
+
+                <div class="tourist-list">
+                    <div class="tourist-container">
+                        <!-- Image Section -->
+                        <div class="tourist-image">
+                            <img src="Image/tourism/goldas_place1.jpg" alt="Golda's Place Image" class="main-image">
+                        </div>
+                        <!-- Information Section -->
+                        <div class="tourist-content">
+                            <h1>Golda’s Place</h1>
+                            <p class="description">An enchanting mountain ridge offering breathtaking views and a serene campground setting.</p>
+                            <h2>Location</h2>
+                            <p>Kalingking, Malitbog, Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/8.5055624,124.9144723/@8.5204431,124.8868669,4086m/data=!3m1!1e3!4m2!4m1!3e0?entry=tts&g_ep=EgoyMDI0MDgyOC4wKgBIAVAD" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Clint Dave L. Dancil</p>
+                            <h3>Contact Number</h3>
+                            <p>0946 669 3508</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/bagyangon_falls1.jpg" alt="Bagyangon Falls Image" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Bagyangon Falls</h1>
+                            <p class="description">A hidden gem where nature’s tranquility and breathtaking landscapes come together to create a perfect escape.</p>
+                            <h2>Location</h2>
+                            <p>Bagyangon, Sanluis, Malitbog, Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5356293,124.8796262/GXVG%2BCQ7+Bagyangon+Falls+Drop+Off+Point,+Malitbog,+Bukidnon/@8.5338911,124.9090465,8995m/data=!3m1!1e3!4m9!4m8!1m0!1m5!1m1!1s0x32ffc5a23f80b423:0x4bebb5636d54be2f!2m2!1d124.9769279!2d8.5435261!3e0?entry=tts&g_ep=EgoyMDI0MDgyOC4wKgBIAVAD" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Melchor Gaspar</p>
+                            <h3>Contact Number</h3>
+                            <p>0917 718 1856</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tourist-container">
+                        <div class="tourist-image">
+                            <img src="Image/tourism/lower_sampiano1.jpg" alt="Lower Sampiano River View" class="main-image">
+                        </div>
+                        <div class="tourist-content">
+                            <h1>Lower Sampiano River View</h1>
+                            <p class="description">Where the serene beauty of nature meets the flowing waters of the Lower Sampiano River.</p>
+                            <h2>Location</h2>
+                            <p>Sitio Lower, Sampiano, Malitbog Bukidnon</p>
+                            <p class="view-location">
+                                <a href="https://www.google.com/maps/dir/8.5354081,124.8796256/8.4723266,124.8606224/@8.5040269,124.8470025,13403m/data=!3m2!1e3!4b1!4m5!4m4!1m0!1m1!4e1!3e0?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                                    View Location
+                                </a>
+                            </p>
+                            <h3>Contact Person</h3>
+                            <p>Keen Thomas</p>
+                            <h3>Contact Number</h3>
+                            <p>0946 669 3508</p>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="tourist-button">
+                <button class="mobile-cta-button" onclick="location.href='TourismPage.html';">Explore More</button>
+            </div>
+        </div>
+
+
+
+        <script>
+            function toggleTouristMobileSection() {
+              const mobileSection = document.querySelector('.tourist-mobile-section');
+              if (window.innerWidth <= 426) {
+                mobileSection.style.display = 'block';
+              } else {
+                mobileSection.style.display = 'none';
+              }
+            }
+          
+            // Run the function when the page loads
+            document.addEventListener('DOMContentLoaded', toggleTouristMobileSection);
+          
+            // Also run the function whenever the window is resized
+            window.addEventListener('resize', toggleTouristMobileSection);
+          </script>
+          
+
+
+
             <div class="tour-section">
                 
                 <div class="tour-slide">

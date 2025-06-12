@@ -612,6 +612,7 @@ header {
     letter-spacing: 1px;
     transition: transform 0.3s ease, color 0.3s ease;
   }
+
   .about-title h1:hover {
     transform: scale(1.05);
     color: #51c155;
@@ -624,11 +625,10 @@ header {
     align-items: center;    
     justify-content: center; 
     max-width: 1500px;
-    margin: 50px auto 0 auto; /* Single margin declaration for top + auto sides */
+    margin: 50px auto 0 auto;
     flex-wrap: wrap; 
-    /* If you want an animation on scroll or load, you can toggle these via JS */
-    opacity: 1;              /* Set to 1 by default */
-    transform: translateY(0); /* Set to 0 by default */
+    opacity: 1;             
+    transform: translateY(0); 
     transition: all 0.8s ease;
     margin-right: -50px;
     margin-left: 150px;
@@ -637,8 +637,8 @@ header {
   
   /* ABOUT IMAGES WRAPPER */
   .about-images {
-    flex: 1;          /* Allows .about-images and .about-text to share row space */
-    max-width: 40%;   /* Prevent images from getting too large */
+    flex: 1;         
+    max-width: 40%;   
     position: relative;
     display: flex;
     flex-direction: column;
@@ -703,7 +703,6 @@ header {
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    /* Removed negative margins to keep layout consistent */
   }
   .news-sub1-title {
     font-family: Playfair;
@@ -721,6 +720,7 @@ header {
     color: #1b5e20;
     margin-bottom: 10px;
   }
+
   .short-story-content h3 {
     font-family: Playfair;
     font-size: 1.5rem;
@@ -728,6 +728,7 @@ header {
     color: #1b5e20;
     margin-bottom: 12px;
   }
+  
   .short-story-content p {
     font-family: "Open Sans";
     font-size: 1.2rem;
@@ -1104,6 +1105,26 @@ input:checked + label .description {
     flex: 1;
     max-width: 80%;
 }
+
+.geography-container, 
+.geography-container-reverse-layout {
+    display: flex;
+    flex-direction: row; /* Default: Side by side */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,371 @@
+@media (max-width: 1400px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -30px;
+    }
+
+    .culture-text {
+        margin-right: -30px;
+    }
+
+    .culture-img1, .culture-img2 {
+        width: 280px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 280px;
+    }
+
+
+
+
+      /* Tour Section */
+    .tour-item .tour-content {
+        margin-left: 35px;
+        top: 50%;
+    }
+
+
+
+    .geography-image img {
+        max-width: 70%;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 70%;
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -25px;
+    }
+
+
+
+    
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 100px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 200px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -50px;
+    }
+
+    .culture-text {
+        margin-right: -50px;
+    }
+
+    .culture-img1, .culture-img2 {
+        width: 260px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 260px;
+    }
+
+    .about-images::before {
+        margin-top: 20px;
+        height: 250px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 250px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        max-width: 70%;
+        margin-right: 50px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 70%;
+        margin-left: -50px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-right: -60px;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -50px;
+        
+    }
+
+
+
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 100px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 200px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+
+    /* About Section */
+    .about-text {
+        margin-left: -120px;
+    }
+
+    .culture-text {
+        margin-right: -120px;
+    }
+    
+    .about-image-wrapper {
+        margin-left: -100px;
+      }
+
+    .culture-image-wrapper {
+        margin-right: -100px;
+      }
+
+    .culture-img1, .culture-img2 {
+        width: 230px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 230px;
+    }
+
+    .about-images::before {
+        margin-top: 20px;
+        height: 215px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 215px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        max-width: 70%;
+        margin-right: 50px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 70%;
+        margin-left: -50px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-right: -60px;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -100px;
+        
+    }
+
+
+
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 60px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 150px;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+    /*Wrapper */
+    .wrapper,
+    .wrapper-header {
+        max-width: 100%;
+    }
+
+    /* About Section */
+    .about-text {
+        margin-left: -120px;
+    }
+
+    .culture-text {
+        margin-right: -120px;
+    }
+    
+    .about-image-wrapper {
+        margin-left: -100px;
+      }
+
+    .culture-image-wrapper {
+        margin-right: -100px;
+      }
+
+    .culture-img1, .culture-img2 {
+        width: 230px;
+    }
+
+      .about-img1, .about-img2 {
+        width: 230px;
+    }
+
+    .about-images::before {
+        margin-bottom: 20px;
+        height: 220px;
+    }
+
+    .culture-images::before {
+        margin-top: 1 0px;
+        height: 220px;
+    }
+
+    .card {
+        width: 100px;
+    }
+
+
+
+    /* Geography Section */
+
+    .geography-image img {
+        max-width: 75%;
+        margin-right: -10px;
+    }
+    
+    /* Geography-Image1 Styling (Specific to the 2nd Section) */
+    .geography-image1 img {
+        max-width: 65%;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+
+    .geography-text {
+        margin-top: 60px;
+        margin-right: -100px;
+        
+    }
+
+    .geography-text2 {
+        margin-top: 20px;
+        margin-left: -100px;
+        
+    }
+
+
+      /* Footer Section */
+      .hotlines-column {
+        margin-left: 20px;
+      }
+    
+       
+      .quick-links-column {
+        margin-right: 90px;
+      }
+}
